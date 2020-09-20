@@ -141,7 +141,6 @@ nav img{
     border: 1px solid chocolate ;
     border-radius: 10px;
     padding: 50px 0px 50px 0px;
-    background: rgba(255, 255, 255, 0.74);
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.09);
     border-radius: 20px;
@@ -151,7 +150,6 @@ nav img{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #C4C4C4;
     min-width: 22vw;
     min-height: 10vw;
     border: 1px solid #000000;
