@@ -140,11 +140,19 @@ nav img{
     /* padding: 15px 10px 20px 10px; */
     filter: drop-shadow(0px 0px 0px rgba(69, 38, 38, 0.72));
     font-size: 1.3vw;
+    line-height: 25px;;
 }
- .form_row input[type=text], input[type=email],input[type=textarea]{
+ .form_row input[type=text], input[type=email]{
    width: 20vw;
    height: 3.8vh;
+   padding: 20px 0px 20px 0px;
 }
+.form_row inputinput[type=textarea]{
+    width: 20vw;
+    height: 6vh;
+ }
+ 
+
 
 input[type=submit] {
     background-color: #3e1f26;
@@ -170,5 +178,5 @@ input[type=submit] {
     }
     .social_media_and_join_btn ul {
         list-style: none;
-        line-height: 6vw;
+        line-height: vw;
     }
