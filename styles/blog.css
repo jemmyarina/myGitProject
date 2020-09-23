@@ -150,9 +150,9 @@ nav img{
     height: auto;
     margin-left: 0.5vw;
 }
-/* .Post_border .Post_photo{
+.Post_border .Post_photo{
     width: 20%;
-} */
+}
 .Post_border .Post_text{
     display: flex;
     flex-direction: column;
@@ -219,7 +219,7 @@ input[type=submit] {
     margin: 0.5vw 0 0.5vw 0;
 }
 .BP_content_border .Post_photo img{
-    width: 90%;
+    width: 100%;
 }
 .BP_content_border .Post_title{
     width: 73%;
