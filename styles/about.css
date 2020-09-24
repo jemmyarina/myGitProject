@@ -3,13 +3,14 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: 'Poppins', sans-serif;
 }
 .wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center; 
     width: 100%;
-    height: 100vh;
+    margin: 0 auto;
 }
 
 .left1 {
@@ -30,53 +31,46 @@
     align-items: center;
     width: 100%;
     height: 25%;
+    font-size: 4em;
 	background: #F8F1F7;
 	filter: drop-shadow(2px 0px 20px rgba(0, 0, 0, 0.27));
-    padding: 1.5vw 0vw 3vw 0vw ;
-    text-decoration: orangered;
 		
 	}
-    .logo .fname{
-		line-height: 3vh;
-		font-size: 3.1vw;
-		color: #801843;
-	}
-	.logo .lname{
-		line-height: 4.7vw;
-		font-size: 2.1vw;
-		color: #801843;
-		position: relative;
-	}
-	.logo .func{
-		line-height: 1vh;
-		font-size: 1vw;
-		color: #000000;
-	}
-nav{
+.logo .fname{
+    color: #801843;
+    font-size: 90%;
+}
+.logo .lname{
+	font-size: 65%;
+	color: #801843;
+	position: relative;
+}
+.logo .func{
+	margin-bottom: 4em;
+	font-size: 35%;
+    color: #000000;
+}
+.left1 nav{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 750%;
-	background: #F8F1F7;
-	filter: drop-shadow(2px 0px 20px rgba(0, 0, 0, 0.27));
+    background: #F8F1F7;
+    filter: drop-shadow(2px 0px 20px rgba(0, 0, 0, 0.27));
     padding: 100px 0px 100px 0px;
 }
 nav a{
-    font-size: 1.4vw;
-    margin: 0 auto;
-    width: 50%;
-    height: auto;
-    text-decoration: orange;
-    color: black; 
+    font-size: 1.9em;
+    text-decoration: none;
+    color: black;
+
 }
 nav img{
-    width: 25%;
-    height:  auto;;
-    margin: 10px 0 0 0;
+    width: 20%;
+    height:  auto;
 }
-
 .right2 {
     display: flex;
     flex-direction: row;
@@ -87,13 +81,14 @@ nav img{
     background-color: #E5E5E5E5;
 }
 .right2 .page_bar{
+    display: flex;
+    align-items: center;
     width: inherit;
-    height: 5vw;
+    height: 10%;
     background-color: #801843;
     position: absolute;
     top: 0px;
-    margin-left: 0px;
-    font-size: 3.2vw;
+    font-size: 4.3em;
     color:#FFFFFF;
 }
 .about_txt{
@@ -101,18 +96,19 @@ nav img{
     flex-direction: column;
     justify-content: center;
     margin-left: 20%;
-    text-align: justify;
 }
 .about_txt .about_txt_head{
-    font-size: 2vw;
+    font-size: 2.7em;
     font-weight: bold;
-    border-left: 0.5vw solid #801843;
-    padding-top: 1.3vw;
-    padding-bottom: 1.3vw;
-    padding-left: 0.5vw;
+    border-left: 0.3em solid #801843;
+    padding: 0.4em 0 0.3em 0.4em;
+    top:3em;
+    position: absolute;
 }
 .about_txt .about_txt_parag{
-    font-size: 1.3vw;   
+    font-size: 1.7em;  
+    top: 25rem;
+    position: absolute;
     }
 .social_media_and_join_btn{
     display: flex;
@@ -121,5 +117,95 @@ nav img{
     }
     .social_media_and_join_btn ul {
         list-style: none;
-        line-height: 6vw;
+        line-height: 6em;
     }
+    
+.hamburger_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    width: 30px;
+    height: 30px;
+  }
+  .hamburger_button .bar {
+  height: 3px;
+  width: 6em;
+  background-color: red;
+  border-radius: 10px;
+  }
+  
+/* RESPONSIVENESS BELOW
+========================
+ */
+ .hamburger_button {
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 3em;
+    right: 4em;
+    width: 2em;
+    height: 3em;
+  }
+  .hamburger_button .bar {
+  height: 0.6em;
+  width: 4.7em;
+  background-color:  #801843;
+  border-radius: 10px;
+  }
+
+
+@media only screen and (max-width:1070px){
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .left1{
+        width: 100%;
+        height: 30%;
+    }
+    .logo{
+        font-size: 3rem;;
+    }
+    .nav_links{
+        display: none;
+    }
+
+    .page_bar{
+        display: none;
+    }
+    
+    
+    
+    .right2{
+        width: 100%;
+        font-size: 0.6rem;
+    }
+    .hamburger_button{
+        display: flex;
+    }
+    .t{
+        display: flex;
+    }
+    .nav_links.active{
+        display: flex;
+    }
+    .logo{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width:240px){
+
+    .left1 .logo .nav{
+        width: 100%;
+        font-size: 1rem;;
+    }
+    .left .hamburger_button .bar{
+
+    }
+}
