@@ -1,111 +1,13 @@
 
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Poppins', sans-serif;
-}
-.wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    width: 100%;
-    max-width: 980 px;
-    margin: 0 auto;
-}
-
-.left1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 20%;
-    height: 100vh;
-    background-color: burlywood;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.logo{
-	display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 25%;
-	background: #F8F1F7;
-	filter: drop-shadow(2px 0px 20px rgba(0, 0, 0, 0.27));
-    padding: 1.5vw 0vw 3vw 0vw ;
-    text-decoration: orangered;
-		
-	}
-    .logo .fname{
-		line-height: 3vh;
-		font-size: 3.1vw;
-		color: #801843;
-	}
-	.logo .lname{
-		line-height: 4.7vw;
-		font-size: 2.1vw;
-		color: #801843;
-		position: relative;
-	}
-	.logo .func{
-		line-height: 1vh;
-		font-size: 1vw;
-		color: #000000;
-	}
-nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 750%;
-	background: #F8F1F7;
-	filter: drop-shadow(2px 0px 20px rgba(0, 0, 0, 0.27));
-    padding: 100px 0px 100px 0px;
-}
-nav a{
-    font-size: 1.4vw;
-    margin: 0 auto;
-    width: 50%;
-    height: auto;
-    text-decoration: orange;
-    color: black; 
-}
-nav img{
-    width: 25%;
-    height:  auto;;
-    margin: 10px 0 0 0;
-}
-
-.right2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    height: 100vh;
-    background-color: #E5E5E5E5;
-}
-.right2 .page_bar{
-    width: 100%;
-    height: 8vh;
-    background-color: #801843;
-    position: absolute;
-    top: 0px;
-    margin-left: 0px;
-    font-size: 3.2vw;
-    color:#FFFFFF;
-}
 /* POSTS GROUPING*/
-.right2 .Blog_posts{
+.Blog_posts{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100vh;
-    margin-left: 10%;
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 /* LEFT SIDE(LATEST POSTS) */
 .Blog_posts .Blog_latest_group{
@@ -113,7 +15,7 @@ nav img{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 50%;
     height: auto;
 }
 .Blog_latest_group .Latest_title{
@@ -121,7 +23,7 @@ nav img{
     justify-content: space-between;
     align-items: center;
     width: 95%;
-    font-size: 1.4vw;
+    font-size: 1.4em;
 }
 .Latest_title img{
     width: 30%;
@@ -150,7 +52,7 @@ nav img{
     align-items: center;
     width: 20%;
     height: auto;
-    margin-left: 0.5vw;
+    margin-left: 0.5em;
 }
 .Post_border .Post_photo{
     width: 20%;
@@ -164,35 +66,43 @@ nav img{
     margin: 0 auto;
 }
 .Post_text .Post_title{
-    font-size: 1.6vw;
+    font-size: 1.6em;
     font-weight: bold;
 }
 .Post_text .Post_date_publisher{
-    font-size: 1vw;
+    font-size: 1em;
+    color: #801843;
 }
 .Post_text .Post_date_publisher .sp{
-    color: red;
+    font-weight: bold;
 }
-
+ 
 .Post_text .Post_starting_txt{
-    font-size: 1.2vw;
+    font-size: 1.2em;
 }
 input[type=submit] {
-    width: 18%;
+    width: 9em;
     height: 3.5vh; 
     border: 1px solid #000000;
     text-decoration: none;
-    font-size: 1vw;
+    font-size: 1em;
     border-radius: 5px;
     font-weight: bold;
 }
 /* RIGHT SIDE(POPULAR POSTS)  */
-.Blog_posts .Blog_popular_container{
+.right_side_pop_soc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: auto;
+}
+ .Blog_posts .right_side_pop_soc .Blog_popular_container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 25%;
+    width: 80%;
     height: auto;
     background-color: #CDCACA;
     border: 2px solid black;
@@ -201,7 +111,7 @@ input[type=submit] {
     background-color: #801843;
     color: white;
     width: 100%;
-    font-size: 1.3vw;
+    font-size: 1.3em;
     text-align: center;
 }
 .Repet2 {
@@ -218,7 +128,7 @@ input[type=submit] {
     background-color: whitesmoke;
     width: 90%;
     height: auto;
-    margin: 0.5vw 0 0.5vw 0;
+    margin: 0.5em 0 0.5em 0;
 }
 .BP_content_border .Post_photo img{
     width: 100%;
@@ -226,84 +136,123 @@ input[type=submit] {
 .BP_content_border .Post_title{
     width: 73%;
     height: auto;
-    font-size: 1.3vw;
+    font-size: 1.3em;
 }
-.social_media_and_join_btn{
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    }
-    .social_media_and_join_btn ul {
-        list-style: none;
-        line-height: 6vw;
-    }
+
+
 
   /* RESPONSIVENESS BELOW
-========================
- */
-.hamburger_button {
-
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    top: 3em;
-    right: 4em;
-    width: 2em;
-    height: 3em;
-  }
-  .hamburger_button .bar {
-  height: 0.6em;
-  width: 4.7em;
-  background-color:  #801843;
-  border-radius: 10px;
-  }
+======================== */
 
 
-@media only screen and (max-width:1070px){
-    .wrapper{
+
+@media only screen and (max-width:1670px){
+    /* =====latest======*/
+    .Blog_posts .Blog_latest_group input[type=submit]{
+        width: 85%;
+    }
+    .Blog_posts .Blog_latest_group img {
+        max-width: 100%;
+        height: auto;
+    }
+    .Blog_posts .Blog_latest_group p{
+        font-size: 85%;
+    }
+    /* =====popular======= */
+    .Blog_posts .Blog_popular_container{
+        width: 19%;
+    }
+    .Blog_posts .Blog_popular_container img {
+        max-width: 100%;
+        height: auto;
+    }
+    .Blog_posts .Blog_latest_group p{
+        font-size: 70%;
+    }
+}
+@media only screen and (max-width:1100px){
+    .Blog_posts{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
     }
-    .left1{
-        width: 100%;
-        height: 30%;
+    /* =====latest======*/
+    .Blog_posts .Blog_latest_group{
+        width: 60vw;
+        margin: 3vw auto 3vw auto;
     }
-    .logo{
-        font-size: 3rem;;
+    .Blog_posts .Blog_latest_group input[type=submit]{
+        max-width: 30%;
+        height: auto;
+        font-size: 0.6em;
     }
-    .nav_links{
-        display: none;
+    .Blog_posts .Blog_latest_group .Post_photo {
+        width: 8vw;
+        height: 8vw;
     }
-    .page_bar{
-        display: none;
+    .Blog_posts .Blog_latest_group p{
+        font-size: 65%;
     }
-    
-    .right2{
-        width: 100%;
-        font-size: 0.6rem;
+
+
+    /* =====popular======*/
+    .right_side_pop_soc{
+        width: 55vw;
     }
-    .hamburger_button{
-        display: flex;
+    .Blog_popular_container  .BP_content_border{
+        width: 40vw;
     }
-    .t{
-        display: flex;
-    }
-    .nav_links.active{
-        display: flex;
-    }
-    .logo{
-        display: flex;
+
+    .Blog_posts .Blog_popular_container p{
+        font-size: 1em;
     }
 }
 
-@media only screen and (max-width:240px){
-
-    .left1 .logo .nav{
+@media only screen and (max-width:640px){
+    .Blog_posts .Blog_latest_group { 
         width: 100%;
-        font-size: 1rem;;
+        margin-top: 0.1vw;
     }
-    .left .hamburger_button .bar{
+    .Blog_posts .Blog_latest_group .Post_photo {
+        width: 7vw;
+        height: 7vw;
+    }
+    .Blog_posts .Blog_latest_group input[type=submit]{
+        max-width: 25%;
+        height: auto;
+        font-size: 2vw;
+    }
+    .Blog_posts .Blog_latest_group p{
+        font-size: 65%;
+    }
+  
+    /* =====popular======*/
+    .right_side_pop_soc{
+        width: 55vw;
+    }
+    .Blog_popular_container  .BP_content_border{
+        width: 40vw;
+        height: 10vw;
+    }
 
+    .Blog_posts .Blog_popular_container p{
+        font-size: 3vw;
+    }
+    .Blog_posts .Blog_popular_container .Post_photo{
+        width: 7vw;
+        height: 7vw;  
+    }
+}
+@media only screen and (max-width:550px){
+    .Blog_posts{
+        margin-top: 2px;
+    }
+    .Blog_posts .Blog_latest_group .Post_text p{
+      font-size: 1.7vw;
+    }
+    .Blog_posts .Blog_popular_container .Post_title p{
+        font-size: 2.5vw; 
     }
 }
