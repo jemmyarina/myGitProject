@@ -1,114 +1,18 @@
 
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Poppins', sans-serif;
-}
-.wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    width: 100%;
-    margin: 0 auto;
-}
-
-.left1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 20%;
-    height: 100vh;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.logo{
-	display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 25%;
-    font-size: 4em;
-	background: #F8F1F7;
-	filter: drop-shadow(2px 0px 20px rgba(0, 0, 0, 0.27));
-		
-	}
-.logo .fname{
-    color: #801843;
-    font-size: 90%;
-}
-.logo .lname{
-	font-size: 65%;
-	color: #801843;
-	position: relative;
-}
-.logo .func{
-	margin-bottom: 4em;
-	font-size: 35%;
-    color: #000000;
-}
-.left1 nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 750%;
-    background: #F8F1F7;
-    filter: drop-shadow(2px 0px 20px rgba(0, 0, 0, 0.27));
-    padding: 100px 0px 100px 0px;
-}
-nav a{
-    font-size: 1.9em;
-    text-decoration: none;
-    color: black;
-}
-nav img{
-    width: 20%;
-    height:  auto;
-}
-.form_side{
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  width: 80%;
-  height: 100vh;
-  background-color: #E5E5E5E5;
-  margin: 0 auto;
-}
-.form_side .right2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    /* width: 100%;
-    height: 100vh; */
-    margin: 0 auto;
-   
-}
- .page_bar{
-    display: flex;
-    align-items: center;
-    width: 80%;
-    height: 10%;
-    background-color: #801843;
-    position: absolute;
-    top: 0px;
-    font-size: 4.3em;
-    color:#FFFFFF;
-    margin: auto auto;
-}
-
 /* SIGN IN CSS CODES START HERE */
 
+.form_side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5em;
+}
 .user_icon{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5.6em 0 0.2em 0;
-    max-width: 100%;
+    /* margin-top: 3em; */
     height: auto;
   }
 
@@ -141,75 +45,42 @@ nav img{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width:30em;
-    border: 1px solid chocolate ;
+    width:24em;
+    height: 55vh;
+    box-shadow: 2px 2px  5px 2px gray;
     border-radius: 10px;
     padding: 50px 0px 50px 0px;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.09);
-    border-radius: 20px;
-    margin: auto auto;
+    /* box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.09); */
+    /* margin: 0 auto; */
 }
-.form_border .form_container{
+ 
+.form_container .form_fields{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 19em;
-    height: 12em;
+    width: 20em;
+    /* margin: auto auto; */
     background-color: #818080;
-    border: 1px solid #000000;
-    align-content: center;
-    /* padding: 15px 10px 20px 10px; */
-    filter: drop-shadow(0px 0px 0px rgba(69, 38, 38, 0.72));
-    font-size: 1.3em;
-    margin: auto auto;
 }
- .form_row input[type=text], input[type=password]{
+input[type=email], input[type=password]{
    width: 17em;
-   height: 3.8em;
+   height: 3em;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-input[type=checkbox] {
-    transform: scale(2);
-    background: #3d404e;
-    border: #7f83a2 1px solid;
-}
-.for_checkbox {
- display: flex;
- justify-content: space-between;
- align-items: center;
- font-size: 1.3em;
- margin: 12px 20px 12px 20px;
-}
-.for_checkbox label{
-    margin-left: 20px;
-    }
-
-.for_checkbox a{
-font-size: 1.2em;
-margin-left: 20px;
-color: orangered;
-}
-
 input[type=submit] {
     background-color: #3e1f26;
-    width: 15em;
-    height: 2.3em; 
-    border: 1px solid #000000;
+    width: 14em;
+    height: 2.6em; 
+    font-size: 1.3em;
     box-shadow: 4px 2px 9px rgba(0, 0, 0, 0.7);
     color: white;
+    margin-top: 2em;
+    border-radius: 10em;
     text-decoration: none;
-    align-content: center;
-    font-size: 1.6em;
+
     padding: 1px 0px 1px 0px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 .verify_credentials{
     display: flex;
@@ -219,29 +90,12 @@ input[type=submit] {
     margin-top: 20px;
 }
 .verify_credentials a{
-    font-size: 1.2em;  
+    font-size: 1em;  
     color: orangered;
-    margin-left: 60px;
-}
-.verify_credentials p{
-    font-size: 1.2em; 
-    margin-left: 30px;
+    margin-left: 3em;
 }
 
-/* SIGN IN CSS CODES END HERE */
 
-.social_media_and_join_btn{
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    width: 10%;
-    height: 100vh;
-}
-.social_media_and_join_btn ul {
-    list-style: none;
-     line-height: 6em;
-    
-}
 /* RESPONSIVENESS BELOW
 ========================
  */
@@ -263,51 +117,3 @@ input[type=submit] {
   border-radius: 10px;
   }
 
-
-@media only screen and (max-width:1070px){
-    .wrapper{
-        display: flex;
-        flex-direction: column;
-    }
-    .left1{
-        width: 100%;
-        height: 30%;
-    }
-    .logo{
-        font-size: 3rem;;
-    }
-    .nav_links{
-        display: none;
-    }
-    .page_bar{
-        display: none;
-    }
-    
-    .right2{
-        width: 100%;
-        font-size: 0.6rem;
-    }
-    .hamburger_button{
-        display: flex;
-    }
-    .t{
-        display: flex;
-    }
-    .nav_links.active{
-        display: flex;
-    }
-    .logo{
-        display: flex;
-    }
-}
-
-@media only screen and (max-width:240px){
-
-    .left1 .logo .nav{
-        width: 100%;
-        font-size: 1rem;;
-    }
-    .left .hamburger_button .bar{
-
-    }
-}
