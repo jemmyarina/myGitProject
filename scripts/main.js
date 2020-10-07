@@ -4,3 +4,4 @@ const navBar = document.getElementsByClassName('nav_links')[0]
 hamburgerButton.addEventListener('click', () => {
   navBar.classList.toggle('t')
 })
+
