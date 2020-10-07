@@ -6,6 +6,7 @@
 <link rel="icon" href="../assets/my_logo.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <link rel="stylesheet" href="../styles/sign_up.css" > 
+<link rel="stylesheet" href="../styles/nav.css" > 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body> 
@@ -13,9 +14,11 @@
 	<div class="left1">
 		<div class="logo">
 			<div class="fname">Jemima</div>
-			<div class="lname">Nyirasafari</div><br>
+			<div class="lname">Nyirasafari</div> 
 			<div class="func">Full stack developer</div>
 		</div>
+		
+		<!-- humburger button -->
 		<a href="#">
 			<div class="hamburger_button">
 				<span class="bar"></span>
@@ -23,6 +26,7 @@
 				<span class="bar"></span>
 			</div>
 		</a>
+
 		<nav class="nav_links">
 		<div><img src="../assets/home_icon.png"><a href="../index.html">  Home </a> </div>
 		<div><img src="../assets/About_icon.png"><a href="../pages/about.html">  About </a> </div>
@@ -41,45 +45,47 @@
 		</div>		
 		<div class="border_all"> 
 			<div class="signup_txt_parag"> 
+				
 				<p>
 				Sign up once and <br> have more control <br> on blog's articles</article>.</p><br> 
 			</div>
-
-			<div class="form_container"> 
+			<form class="form_container"> 
 				<div class="form_row">
-					<label for="names">Your name:</label><br>
-					<input type="text" id="name">
-				</div><br>
-				<div class="form_row">
-					<label for="email">Your email:</label><br>
-					<input type="email" id="email">
-				</div><br>
-				<div class="form_row">
-					<label for="username"> User name:</label><br>
-					<input type="text" id="username">
+					<label for="email">Email:</label><br>
+					<input type="email" id="email" placeholder="Enter your email">
 				</div><br>
 				<div class="form_row">
 					<label for="password"> Password:</label><br>
-					<input type="password" id="password">
+					<input type="password" id="password" placeholder="Create a password">
 				</div><br>
 				<div class="form_row">
 					<label for="password_confirmation"> Confirm Password:</label><br>
-					<input type="password" id="password">
+					<input type="password" id="conf_password" placeholder="Confirm a password">
 				</div><br>
 				<input type="submit" value="Register" >
-			</div>
+			</form>
+		</div>
+		<div class="message" style="background-color: crimson; color: white;
+				width: 210px; height: 45px; display: none;">
 		</div>
 
-	 	<div class="social_media_and_join_btn">
+	 	<!-- <div class="social_media_and_join_btn">
 			<ul>
-			 <li><a href="sign_in.html"><img src="../assets/Join_btn.png" alt="Join_btn"></a></li>
 			 <li><a href="mailto:jemmyarina@gmail.com"><img src="../assets/Email.png" alt="Email Icon"></a></li>
 			 <li><a href="https://github.com/jemmyarina"><img src="../assets/github_icon.png" alt="github Icon"></a></li>
 			 <li><a href="https://www.linkedin.com/in/jemima-nyirasafari-a89061180/"><img src="../assets/LinkedIn_icon.png" alt="LinkedIn Icon"></a></li>
 		 	</ul>
-		</div>
+		</div> -->
 	</section>		
 </div> 
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+
+<!-- <script defer src="./init-firebase.js"></script>  WE HAVE IT BELOW-->
+
+<script src="../scripts/firebaseConfig.js"></script>
+<script src="../scripts/signUp.js"></script>
 <script src="../scripts/main.js"></script>
 </body>
 </htnl>
