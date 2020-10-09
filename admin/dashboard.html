@@ -4,7 +4,8 @@
 <head>
 <title>Jemima|Full stack developer</title>
 <link rel="icon" href="../assets/my_logo.png"/>
-<link rel="stylesheet" href="../styles/admin.css">
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet" href="dashboard.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
@@ -12,16 +13,13 @@
 <div class="wrapper">
     <nav class="nav_top">
         <div class="logo"><img src="../assets/my_logo.png" alt="logo_image"></div>
-        <div class="dashboard_btn"><a href="admin.html">Dashboard</a></div>
-        <div class="publish_article"><a href="articles.html"><img src="../assets/article_publish.png" alt="user icon"><p>Publish an article</p></a></div>
+        <div class="dashboard_btn"><a href="dashboard.html">Dashboard</a></div>
+        <div class="publish_article"><a href="admin_blog_create.html"><img src="../assets/article_publish.png" alt="user icon"><p>Publish an article</p></a></div>
         <div class="contact_messages"><a href="contact_messages.html"><img src="../assets/message.png" alt="message icon"><p>Read Messages</p></a></div>
         <div class="manage_users"><a href="manage_users.html"><img src="../assets/users.png" alt="user icon"><p>Manage users</p></a></div>  
         <div class="settings"><a href="settings.html"><img src="../assets/settings_icon.png" alt="settings icon"><p>Settings</p></a></div>
-        <div class="search_bar">
-            <form action=""><input type="text" id="searchbar" placeholder="Type your search here">
-            <!-- <input type="submit" value="" id=""> -->
-            </form>
-        </div>
+        <div class="logout"><a href="sign_in.html"><img src="../assets/settings_icon.png" alt="logout icon"><p>Logout</p></a></div>
+
     </nav>
     <section class="section_bottom">
         <div class="left_side">
@@ -100,5 +98,12 @@
     </div><!-- end of bottom right side -->
     </section>
 </div>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+
+<script src="../scripts/firebaseConfig.js"></script>
+<script src="../scripts/admin.js"></script>
+<script src="../scripts/main.js"></script>
 </body>
 </htnl>

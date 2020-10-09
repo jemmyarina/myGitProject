@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    width: 50%;
+    box-shadow: 2px 2px 5px 2px lightslategray;
+    padding: 1em 0;
+    border: none;
+    border-radius: 20px;
+    margin: 2%  auto;
+}
+.error_message{
+    font-size: 0.7em;
+    width: 170px;
+    height: 20px;
+}
+label{
+    font-size: 0.7em;
+}
+input[type=text], input[type=date],input[type=email] {
+    width: 17em;
+    height: 2em;
+}
+.textarea1{
+    width: 17em;  
+    height: 4em; 
+}
+.textarea2{
+    width: 20em;
+    height: 10em;  
+}
+input[type=submit] {
+    border: none;
+    color: white;
+    background-color: #020533;
+    width: 9em;
+    height: 1.8em;
+   font-size: 1.3em;
+   border-radius: 20px;
+}
+span{
+    color: red;
+}
+ 
+@media only screen and (max-width:1200px){
+    .form_container{
+        width: 100%;
+    }
+    label{
+        font-size: 0.7em;
+    }
+
+    h1{
+        font-size: 1em;
+    }
+    h5{
+        font-size: 0.7em;
+    }
+ 
+}  
+@media only screen and (max-width:845px){
+
+
+    input[type=file] {
+        width: 13em;
+        height: 1.6em;
+    }
+ 
+}  
+@media only screen and (max-width:550px){
+    .form_container{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 1em;   
+    }
+    h3{
+        font-size: 0.9em;   
+    }
+    h6{
+        display: none;  
+    }
+    p{
+        font-size: 0.7em;   
+    }
+}  
+
+@media only screen and (max-width:300px){
+  
+    .textarea1{
+        width: 14em;  
+        height: 7em; 
+        font-size: 0.8em;
+    }
+    .textarea2{
+        
+        height: 14em; 
+        font-size: 0.8em; 
+    }
+    input[type=text], input[type=date]  {
+        width: 14em;
+        height: 1.6em;
+    }
+    input[type=file] {
+        width: 11em;
+        height: 1.6em;
+    }
+    input[type=submit] {
+        width: 7em;
+    }
+}  

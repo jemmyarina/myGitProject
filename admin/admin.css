@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+/* ====================TOP====================== */
+.nav_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 15%; 
+    background-color: #020533;
+    padding: 2em 2em;
+    
+}
+.nav_top a{
+    text-decoration: none;
+    color: white;
+    font-size:1.3em;
+}
+ .dashboard_btn{
+    border: 2px solid black;
+    background-color: chocolate;
+    width: 10em;
+    height: 3em; 
+    border-radius: 10px;
+    padding: 5px 17px;
+}
+.logo img{
+    width: 70%;
+}
+ p img{
+    font-size: 1.5em;
+    color: white;
+}
+
+/* =========================BOTTOM=============== */
+.section_bottom{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 90%;
+margin: 0 auto;
+}
+
+@media only screen and (max-width:1200px){
+    .nav_top{
+        display: flex;
+        flex-direction: column;
+        height: 100%; 
+        font-size: 1.3em;
+        padding-top: 2em ;
+        padding-bottom: 2em;
+    }
+    .nav_top .dashboard_btn{
+        width: 9em;
+        height: 1.9em;
+        font-size: 1em;
+    }
+    .nav_top img{
+        display: none;
+    }
+    .nav_top p{
+        line-height: 2.4em;
+    }
+    .section_bottom{
+        display: flex;
+        flex-direction: column;
+    }
+   
+}  
+
+@media only screen and (max-width:550px){
+    .nav_top{
+        width: 100%;
+        font-size: 1.6em;
+    }
+    .nav_top .dashboard_btn{
+        width: 8em;
+        height: 1.9em;
+        font-size: 1em;
+    }
+    .nav_top p{
+        line-height: 2em;
+    }
+} 
+/* @media only screen and (max-width:365px){
+    .nav_top{
+        font-size: 1.3em;
+    }
+    .nav_top .dashboard_btn{
+        width: 7em;
+        height: 1.7em;
+        font-size: 1em;
+    }
+    .nav_top p{
+        line-height: 1em;
+    }
+}  */
