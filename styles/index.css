@@ -12,8 +12,8 @@
 }
 
 
-.right_side .text_on_page{
-    font-size: 2.6vw;
+.text_on_page{
+    font-size: 3rem;
     color: white;
     margin-left: 4% ;
 }
@@ -59,8 +59,12 @@
         display: flex;
     }
 }
-@media only screen and (max-width:360px){
-   
+@media only screen and (max-width : 600px){
+    .text_on_page{
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width:360px){  
     .right_side{
        margin-top: 20vw;
     }

@@ -23,7 +23,7 @@ function retreive(){
 
 function dataRetreived(){
     var articalPost = ""
-    alert(articles.length)
+    // alert(articles.length)
     articles.forEach((a)=>{
         articalPost+=`<div class='Latest_posts_container'>
     <div class='Post_border'>
@@ -82,4 +82,4 @@ db.collection('Blog_articles').doc(blogid).get((article)=>{
 retreive();
 setTimeout(()=>{
    dataRetreived()
-},9000)
+},5000)
