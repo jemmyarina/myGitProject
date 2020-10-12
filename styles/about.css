@@ -18,6 +18,11 @@
 .about_txt_parag{
     font-size: 1.3em;  
 }
+.social_media_and_join_btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
     
     @media only screen and (max-width:600px){
         .about_txt_head{

@@ -5,16 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-/* =========================BOTTOM=============== */
-.section_bottom{
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 90%;
-height: 80%;
-}
-
 /* ============BOTTOM LEFT SIDE================= */
 .left_side{
     display: flex;

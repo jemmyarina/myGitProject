@@ -33,12 +33,7 @@ function createBlog(){
         errorMessage.innerHTML="Fill your EMAIL";
          
     }  
-    else if(pub_bio.value==''){
-        errorMessage.style.display="block";
-        errorMessage.style.backgroundColor="crimson";
-        errorMessage.innerHTML="Fill your BIO in short";
-        
-    }
+  
     else if(post_title.value==''){
         errorMessage.style.display="block";
         errorMessage.style.backgroundColor="crimson";
@@ -68,10 +63,8 @@ function createBlog(){
                 post_date:post_date.value,
                 post_textarea2:post_textarea2.value,
                 post_photo:`blogs/${articleId}/articleImage.jpg`
-                
                 })
                 console.log(pub_names.value)
-                
                 errorMessage.style.display="block";
                 errorMessage.style.backgroundColor="lightblue";
                 errorMessage.innerHTML="Article saved successfull";

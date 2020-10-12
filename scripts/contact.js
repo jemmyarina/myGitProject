@@ -33,6 +33,4 @@ cform.onsubmit=(e)=>{
             errorMessage.innerHTML="Message sent successfull"; 
     }
 
-    
-
 }

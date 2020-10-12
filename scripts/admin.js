@@ -3,7 +3,7 @@ function logout() {
 auth.signOut().then(()=>{
     location.href="sign_in.html";
 }) .catch(error=>{
-    console.log('Failed to login');
+    console.log('Failed to logout');
 });
 
 }
