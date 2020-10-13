@@ -33,7 +33,12 @@ function createBlog(){
         errorMessage.innerHTML="Fill your EMAIL";
          
     }  
-  
+    else if(pub_bio.value==''){
+        errorMessage.style.display="block";
+        errorMessage.style.backgroundColor="crimson";
+        errorMessage.innerHTML="Fill your BIO in short";
+        
+    }
     else if(post_title.value==''){
         errorMessage.style.display="block";
         errorMessage.style.backgroundColor="crimson";
@@ -46,12 +51,12 @@ function createBlog(){
         errorMessage.innerHTML="Fill the post BODY";
         return false;
     }
-    // else if(!pub_email.value.match(emailRegex)){
-    //     errorMessage.style.display="block";
-    //     errorMessage.style.backgroundColor="crimson";
-    //     errorMessage.innerHTML="Wrong email"; 
-    //     return false; 
-    // }
+    else if(!pub_email.value.match(emailRegex)){
+        errorMessage.style.display="block";
+        errorMessage.style.backgroundColor="crimson";
+        errorMessage.innerHTML="Wrong email"; 
+        return false; 
+    }
     else{
         storage.ref(`blogs/${articleId}/articleImage.jpg`).put(articleImage)
         .then(()=>{
@@ -61,6 +66,7 @@ function createBlog(){
                 pub_bio: pub_bio.value,
                 post_title:post_title.value,
                 post_date:post_date.value,
+                // post_date:new Date(),
                 post_textarea2:post_textarea2.value,
                 post_photo:`blogs/${articleId}/articleImage.jpg`
                 })

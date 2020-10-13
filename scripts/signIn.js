@@ -20,7 +20,7 @@ if(email=='')
 auth.signInWithEmailAndPassword(email, password).then(resultData=>{
     // console.log(resultData);
     signInForm.reset();
-    location.href="../pages/create_blog_client.html";
+    location.href="../admin/create_blog_client.html";
     // message.style.display="block";
 })
 .catch(error=>{

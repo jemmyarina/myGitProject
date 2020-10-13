@@ -55,7 +55,14 @@ width: 100%;
 height: auto;
 margin: 0 auto;
 }
-
+.logout{
+    cursor: pointer;
+}
+.logout p{
+    text-decoration: none;
+    color: white;
+    font-size:1.3em;
+}
 @media only screen and (max-width:1200px){
     .nav_top{
         display: flex;

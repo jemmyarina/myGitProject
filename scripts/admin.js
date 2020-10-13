@@ -1,9 +1,10 @@
-const logout=document.getElementsByClassName("logout");
-function logout() {
-auth.signOut().then(()=>{
-    location.href="sign_in.html";
-}) .catch(error=>{
-    console.log('Failed to logout');
-});
+const logoutbtn=document.querySelector(".logout");
 
-}
+logoutbtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    auth.signOut().then(()=>{
+        location.href="../pages/sign_in.html";
+    }) .catch(error=>{
+        console.log('Failed to logout');
+    });
+});
