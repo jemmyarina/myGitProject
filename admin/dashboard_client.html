@@ -15,7 +15,7 @@
         <div class="dashboard_btn"><a href="dashboard_client.html">Dashboard</a></div>
         <div class="publish_article"><a href="create_blog_client.html"><img src="../assets/article_publish.png" alt="user icon"><p>Publish an article</p></a></div>
         <div class="settings"><a href="settings.html"><img src="../assets/settings_icon.png" alt="settings icon"><p>Settings</p></a></div>
-        <div class="logout"> <p>Logout</p></div>
+        <div class="logout"> <p id="username">Logout</p></div>
 
     </nav>
     <section class="section_bottom">
@@ -29,5 +29,18 @@
 <script src="../scripts/firebaseConfig.js"></script>
 <script src="../scripts/logout_client.js"></script>
 <script src="../scripts/main.js"></script>
+<script >
+    const userId=sessionStorage.getItem('userid');
+    
+    // console.log(userId);
+   
+    db.collection('Users').doc(userId).get().then((snapshot)=> {
+        var childData = snapshot.data();
+        console.log(childData)
+        document.getElementById('username').innerHTML =` ${childData.fname} ${childData.lname} `;
+    });
+
+</script>
+
 </body>
 </htnl>

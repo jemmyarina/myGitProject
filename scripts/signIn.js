@@ -18,10 +18,13 @@ if(email=='')
 
   
 auth.signInWithEmailAndPassword(email, password).then(resultData=>{
-    // console.log(resultData);
+    console.log(resultData);
+    const id = resultData.user.uid
+    sessionStorage.setItem('userid',id);
+
     signInForm.reset();
-    location.href="../admin/create_blog_client.html";
-    // message.style.display="block";
+    location.href="../admin/dashboard_client.html";
+    message.style.display="block";
 })
 .catch(error=>{
     message.style.display="block";

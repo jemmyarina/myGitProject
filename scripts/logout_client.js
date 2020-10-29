@@ -3,7 +3,7 @@ const logoutbtn=document.querySelector(".logout");
 logoutbtn.addEventListener('click',(e)=>{
     e.preventDefault();
     auth.signOut().then(()=>
-        window.location.href='../pages/sign_in.html');  
+        window.location.href='../index.html');  
     });
 
 
