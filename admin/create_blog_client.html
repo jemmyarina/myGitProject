@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>  
+<html>  
+<head>
+<title>Jemima|Full stack developer</title>
+<link rel="icon" href="../assets/my_logo.png"/>
+<link rel="stylesheet" href="blog_create_client_and_admin.css">
+<link rel="stylesheet" href="dashboard_nav.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body> 
+<div class="wrapper">
+    <nav class="nav_top">
+        <div class="logo"><img src="../assets/my_logo.png" alt="logo_image"></div>
+        <div class="dashboard_btn"><a href="dashboard_client.html">Dashboard</a></div>
+        <div class="publish_article"><a href="create_blog_client.html"><img src="../assets/article_publish.png" alt="user icon"><p>Publish an article</p></a></div>
+        <div class="settings"><a href="settings.html"><img src="../assets/settings_icon.png" alt="settings icon"><p>Settings</p></a></div>
+        <div class="logout"><p>Logout</p> </div>
+    </nav>
+
+    <section class="section_bottom">
+        <h1 class="header">Submit an article</h1>
+        <form action="" class="form_container" id="form" onsubmit="event.preventDefault()"> 
+            <h4 class="errorMessage"></h4>
+            <h3>Author details</h3>
+            <h6>Please, provide your contact details so that we can give you a feedback on your posts</h6>
+
+            <label for="Name ">Names <span>*</span><br>
+                <input type="text" class="Name">
+            </label> 
+            <label for="Email ">Email <span>*</span><br>
+                <input type="email" class="Email">
+            </label> 
+            <label for="message_content"> Short author Bio:<span>*</span><br>
+                <textarea class="textarea1" name="textarea" rows="6" cols="50" placeholder="Type here..."></textarea>
+                </label> 
+                <p class="plz">Please, keep it below 300 characters.</p>          
+                <hr>
+                
+                <h3>Blog details</h3>
+                <h6>Please, submit your blog post by using the following fields:</h6>
+                <label for="title ">Blog title:<span>*</span><br>
+                    <input type="text" class="title">
+                </label>
+                <label for="date"> Date published:<span>*</span><br>
+                    <input type="date" class="date">
+                </label>
+                <label for="message_content"> Article post body:<span>*</span><br>
+                <textarea class="textarea2" name="textarea" rows="6" cols="100" placeholder="Type here..."></textarea>
+                </label>
+                <label for="photo"> Article photo:<br>
+                    <input type="file"  value="upload" class="photo" onchange="uploadImage(event)">
+                </label> <br>
+            <input type="submit" value="Publish" onclick="createBlog()">
+        </form>
+    </section>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
+
+
+<!-- <script defer src="./init-firebase.js"></script>  WE HAVE IT BELOW-->
+
+<script src="../scripts/firebaseConfig.js"></script>
+<script src="../scripts/create_blog.js"></script>
+<script src="../scripts/logout_client.js"></script>
+
+</body>
+</htnl>

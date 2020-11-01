@@ -1,0 +1,21 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.social_media_and_join_btn{
+display: flex;
+flex-direction: column;
+align-self: flex-end;
+}
+.social_media_and_join_btn ul {
+    list-style: none;
+    line-height: 6vw;
+    
+}
+
+
+

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>  
+<html>  
+<head>
+<title>Jemima|Full stack developer</title>
+<link rel="icon" href="../assets/my_logo.png"/>
+<link rel="stylesheet" href="dashboard_nav.css">
+<link rel="stylesheet" href="blog_create_client_and_admin.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body> 
+<div class="wrapper">
+    <nav class="nav_top">
+        <div><img src="../assets/my_logo.png" alt="logo_image"></div>
+        <div class="dashboard_btn"><a href="dashboard_admin.html">Dashboard</a></div>
+        <div><a href="create_blog_admin.html"><img src="../assets/article_publish.png" alt="user icon"><p>Publish an article</p></a></div> 
+        <div><a href="manage_blogs.html"><img src="../assets/message.png" alt="message icon"><p>Manage articles</p></a></div>
+        <div><a href="manage_messages.html"><img src="../assets/message.png" alt="message icon"><p>View Messages</p></a></div>
+        <div><a href="manage_users.html"><img src="../assets/users.png" alt="user icon"><p>View users</p></a></div>  
+        <div><a href="settings.html"><img src="../assets/settings_icon.png" alt="settings icon"><p>Profile</p></a></div>
+        <div><a href="../pages/sign_in.html"><img src="../assets/settings_icon.png" alt="logout icon"><p>Logout</p></a></div>
+    </nav>
+    <section class="section_bottom">
+       
+        <form action="" class="form_container" id="form"> 
+            <h1>Submit an article</h1>
+            <h3>Author details</h3>
+            <h6>Please, provide your contact details so that we can give you a feedback on your posts</h6>
+
+            <label for="Name ">Names <span>*</span><br>
+                <input type="text" id="Name" value="Jemima" disabled>
+            </label> 
+            <label for="Email ">Email <span>*</span><br>
+                <input type="text" class="Email" value="admin@gmail.com" disabled>
+            </label> 
+            <label for="message_centent"> Short author Bio:<span>*</span><br>
+                <textarea class="textarea1" name="textarea" rows="6" cols="50" placeholder="admin bio..." value="admim bio" disabled></textarea>
+                </label> <h5> Please, keep it below 300 characters.</h5>
+                <br>
+                <h3>Blog details</h3>
+                <h6>Please, submit your blog post by using the following fields:</h6>
+                <label for="title ">Blog title:<span>*</span><br>
+                    <input type="text" class="title">
+                </label>
+                <label for="date"> Date published:<span>*</span><br>
+                    <input type="date" class="date">
+                </label>
+                <label for="message_centent"> Article post body:<span>*</span><br>
+                <textarea class="textarea2" name="textarea" rows="6" cols="100" placeholder="Type here..."></textarea>
+                </label>
+                <label for="photo"> Article photo:<br>
+                    <input type="file"  value="upload" id="photo">
+                </label> <br>
+            <input type="submit" value="Publish">
+        </form>
+     
+    </section>
+</div>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
+
+<script src="../scripts/create_blog.js"></script>
+<script src="../scripts/firebaseConfig.js"></script>
+<script src="../scripts/admin.js"></script>
+<script src="../scripts/main.js"></script>
+</body>
+</htnl>
