@@ -1,13 +1,14 @@
 let articles=[];
+let limitnumber =3;
 function retreive(){
-    db.collection("Blog_articles").get().then((querySnapshot) => {
+    db.collection("Blog_articles").orderBy("post_date", "desc").limit(limitnumber).get().then((querySnapshot) => {
       querySnapshot.forEach((article)=> {
         storage.ref(article.data().post_photo).getDownloadURL().then((blogImageUrl)=>{
             articles.push({
                 post_id: article.id,
                 pub_names: article.data().pub_names,
                 post_title: article.data().post_title,
-                post_date: article.data().post_date,
+                post_date: new Date(article.post_date).toLocaleString(),
                 post_textarea2: article.data().post_textarea2,
                 post_photo: blogImageUrl
 
@@ -47,10 +48,21 @@ function dataRetreived(){
             </div>
         </div>
     </div>
-</div>`
+</div>
+
+`
+
     })
 
 document.getElementById("blogArticle").innerHTML=articalPost;
+
+        /* Limit Text */
+        var txt= $('.Post_starting_txt');
+        //    var txt= document.getElementsByClassName('p');
+           txt.text(function(index, currentText) {
+             return currentText.substr(0, 100)+"...";
+           });
+        
 }
 
 function triggerBlog(BlogUID){
