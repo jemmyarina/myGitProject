@@ -1,3 +1,6 @@
+var username = sessionStorage.getItem(username);
+console.log(username)
+
 let articleImage;
 // let articles=[];
 function uploadImage(event){
@@ -8,9 +11,9 @@ function uploadImage(event){
 }
 
 const bform=document.getElementById('form');
-const pub_names=document.getElementsByClassName('Name')[0];
-const pub_email=document.getElementsByClassName('Email')[0];
-const pub_bio=document.getElementsByClassName('textarea1')[0];
+// const pub_names=document.getElementsByClassName('Name')[0];
+// const pub_email=document.getElementsByClassName('Email')[0];
+// const pub_bio=document.getElementsByClassName('textarea1')[0];
 const post_title=document.getElementsByClassName('title')[0];
 const post_date=document.getElementsByClassName('date')[0];
 const post_textarea2=document.getElementsByClassName('textarea2')[0];
@@ -21,25 +24,25 @@ const articleId=uniqueid();
 function createBlog(){
     const emailRegex=/^[a-z]+([a-z0-9_\-\.]){1,}\@([a-z0-9_\-\.]){1,}\.([a-z]{2,4})$/
     // const emailRegex=/\s+@\s+\.\s+/
-    if(pub_names.value==''){
-        errorMessage.style.display="block";
-        errorMessage.style.backgroundColor="crimson";
-        errorMessage.innerHTML="Fill your NAMES";
+    // if(pub_names.value==''){
+    //     errorMessage.style.display="block";
+    //     errorMessage.style.backgroundColor="crimson";
+    //     errorMessage.innerHTML="Fill your NAMES";
       
-    }
-    else if(pub_email.value==''){
-        errorMessage.style.display="block";
-        errorMessage.style.backgroundColor="crimson";
-        errorMessage.innerHTML="Fill your EMAIL";
+    // }
+    // else if(pub_email.value==''){
+    //     errorMessage.style.display="block";
+    //     errorMessage.style.backgroundColor="crimson";
+    //     errorMessage.innerHTML="Fill your EMAIL";
          
-    }  
-    else if(pub_bio.value==''){
-        errorMessage.style.display="block";
-        errorMessage.style.backgroundColor="crimson";
-        errorMessage.innerHTML="Fill your BIO in short";
+    // }  
+    // else if(pub_bio.value==''){
+    //     errorMessage.style.display="block";
+    //     errorMessage.style.backgroundColor="crimson";
+    //     errorMessage.innerHTML="Fill your BIO in short";
         
-    }
-    else if(post_title.value==''){
+    // }
+  if(post_title.value==''){
         errorMessage.style.display="block";
         errorMessage.style.backgroundColor="crimson";
         errorMessage.innerHTML="Fill the post TITLE";
@@ -51,19 +54,20 @@ function createBlog(){
         errorMessage.innerHTML="Fill the post BODY";
         return false;
     }
-    else if(!pub_email.value.match(emailRegex)){
-        errorMessage.style.display="block";
-        errorMessage.style.backgroundColor="crimson";
-        errorMessage.innerHTML="Wrong email"; 
-        return false; 
-    }
+    // else if(!pub_email.value.match(emailRegex)){
+    //     errorMessage.style.display="block";
+    //     errorMessage.style.backgroundColor="crimson";
+    //     errorMessage.innerHTML="Wrong email"; 
+    //     return false; 
+    // }
     else{
         storage.ref(`blogs/${articleId}/articleImage.jpg`).put(articleImage)
         .then(()=>{
             db.collection("Blog_articles").doc(`${articleId}`).set({
-                pub_names:pub_names.value,  
-                pub_email:pub_email.value, 
-                pub_bio: pub_bio.value,
+                // pub_names:pub_names.value,  
+                // pub_email:pub_email.value, 
+                // pub_bio: pub_bio.value,
+                pub_names:username,
                 post_title:post_title.value,
                 post_date:new Date().getTime(),
                 post_textarea2:post_textarea2.value,

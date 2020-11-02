@@ -19,6 +19,7 @@ if(email=='')
   
 auth.signInWithEmailAndPassword(email, password).then(resultData=>{
     // console.log(resultData);
+    const uid= resultData.user.uid; 
     signInForm.reset();
     location.href="../admin/create_blog_client.html";
     // message.style.display="block";
