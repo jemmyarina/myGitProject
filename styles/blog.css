@@ -12,7 +12,6 @@
 .Blog_posts .Blog_latest_group{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     width: 70%;
     height: auto;
@@ -51,7 +50,7 @@
     align-items: center;
     width: 20%;
     height: auto;
-    margin-left: 0.5em;
+    /* margin-left: 0.5em; */
 }
 .Post_border .Post_photo{
     width: 20%;
@@ -81,7 +80,7 @@
 }
 input[type=submit] {
     width: 7em;
-    height: 3.6vh; 
+    /* height: 3.6vh;  */
     border: 1px solid #000000;
     text-decoration: none;
     font-size: 1em;
@@ -145,31 +144,8 @@ input[type=submit] {
 
 
 
-@media only screen and (max-width:1670px){
-    /* =====latest======*/
-    .Blog_posts .Blog_latest_group input[type=submit]{
-        width: 85%;
-    }
-    .Blog_posts .Blog_latest_group img {
-        max-width: 100%;
-        height: auto;
-    }
-    .Blog_posts .Blog_latest_group p{
-        font-size: 85%;
-    }
-    /* =====popular======= */
-    .Blog_posts .Blog_popular_container{
-        width: 19%;
-    }
-    .Blog_posts .Blog_popular_container img {
-        max-width: 100%;
-        height: auto;
-    }
-    .Blog_posts .Blog_latest_group p{
-        font-size: 70%;
-    }
-}
-@media only screen and (max-width:1100px){
+
+@media only screen and (max-width:1200px){
     .Blog_posts{
         display: flex;
         flex-direction: column;
@@ -183,7 +159,7 @@ input[type=submit] {
         margin: 3vw auto 3vw auto;
     }
     .Blog_posts .Blog_latest_group input[type=submit]{
-        max-width: 30%;
+        width: 30%;
         height: auto;
         font-size: 0.6em;
     }

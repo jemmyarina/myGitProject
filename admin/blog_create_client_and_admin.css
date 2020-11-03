@@ -46,7 +46,7 @@ input[type=submit] {
     border: none;
     color: white;
     background-color: #020533;
-    width: 9em;
+    width: 8em;
     height: 1.8em;
    font-size: 1.3em;
    border-radius: 20px;
@@ -54,7 +54,17 @@ input[type=submit] {
 span{
     color: red;
 }
- 
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons input{
+    margin-left: 10px;
+}
+
 @media only screen and (max-width:1200px){
     .form_container{
         width: 100%;

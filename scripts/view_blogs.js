@@ -3,13 +3,35 @@ function manageArticles() {
     db.collection('Blog_articles').get().then((articles) => articles.forEach((i) => {
     console.log(i.doc.data())
     })) ;
-    }
-    
+};
+// .............delete post..................
+function deletePost(blogId){
+    db.collection("Blog_articles").doc(blogId).delete().then( ()=>{
+        alert("blog deleted successfully");
+    })
+    .catch(e =>{
+        alert("Failed to delete a blog post");
+    })
+};
+// ..............edit blog..................
+// const editbtn=document.querySelector('edit');
+// editbtn.addEventListener('click', (e)=>{
+   
+// })
+function editBlog(blogId){
+    console.log(blogId);
+
+    localStorage.setItem('dataId',blogId);
+    window.location.href = 'editBlog.html';
+}
+
+// ................................
+
     window.onload = () => {
         manageArticles();
         document.getElementById('usersTable').style.display="block";
     }
-    
+  
     function articlesfetched(){
     const messagesList = document.querySelector('table')
     db.collection("Blog_articles").get().then(function(querySnapshot) {
@@ -19,12 +41,12 @@ function manageArticles() {
             
           ` 
             <tr class="row">
-                <td>1</td>
                 <td> ${doc.data().post_date}</td>
                 <td> ${doc.data().post_title}</td>
+                <td> ${doc.data().pub_names}</td>
                         
-                    <td ><input type="submit" value="Delete"></td>
-                    <td ><input type="submit" value="Edit"></td>
+                    <td ><input type="submit" value="Delete" onclick=deletePost('${doc.id}')></td>
+                    <td ><input type="submit" value="Edit" class="edit" onclick=editBlog('${doc.id}')></td>
             </tr>    
     
     `

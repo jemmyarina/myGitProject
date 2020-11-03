@@ -4,8 +4,8 @@
 <head>
 <title>Jemima|Full stack developer</title>
 <link rel="icon" href="../assets/my_logo.png"/>
-<link rel="stylesheet" href="manage_users_and_messages.css">
 <link rel="stylesheet" href="dashboard_nav.css">
+<link rel="stylesheet" href="blog_create_client_and_admin.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
@@ -22,21 +22,21 @@
         <div><a href="../pages/sign_in.html"><img src="../assets/settings_icon.png" alt="logout icon"><p>Logout</p></a></div>
     </nav>
     <section class="section_bottom">
-        <p class="ttl"> POSTS </p>
-        <hr>
-
-        <table class="usersTable">
-            <thead>   
-                <tr>
-                    <!-- <th>No</th> -->
-                    <th>POST DATE</th>
-                    <th>POST TITLE</th>
-                    <th>PUBLISHER</th>
-                    <th colspan="2">ACTION</th>
-                </tr>
-            </thead>
+       
+        <form action="" class="form_container" id="form"> 
+            <h1>Edit a blog's article</h1>     
+                <label for="title ">Blog title:<span>*</span><br>
+                    <input type="text" class="title" name="title">
+                </label>
+                <label for="message_centent"> Article post body:<span>*</span><br>
+                <textarea class="textarea2" name="textarea" rows="6" cols="100" placeholder="Type here..."></textarea>
+                </label>
+                <label for="photo"> Article photo:<br>
+                    <input type="file"  value="upload" id="photo">
+                </label> <br>
+            <input type="submit" value="Edit">
+        </form>
      
-          </table>
     </section>
 </div>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
@@ -45,7 +45,7 @@
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
 
 <script src="../scripts/firebaseConfig.js"></script>
-<script src="../scripts/view_blogs.js"></script>
-<script src="../scripts/admin.js"></script>
+<script src="../scripts/editBlog.js"></script>
+
 </body>
 </htnl>

@@ -7,16 +7,15 @@ function getUrlParameter(name) {
 }
 
 var uid = getUrlParameter("postuid");
-const articles= [];
+
 db.collection("Blog_articles").doc(uid).get().then((doc) => {
+
 
     var record ="";
 
     var Data = doc.data();
     
-
     record+=`
-
     
     <div class="Post_title">
                 <p>${Data.post_title}</p>

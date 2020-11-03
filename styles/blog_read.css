@@ -1,46 +1,44 @@
-
-/* POSTS GROUPING*/
 .Blog_posts{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    background-color: green;
 }
 /* ============================= */
-.Blog_posts .Post_title{
+.Post_title{
     display: flex;
     justify-content: space-between;
-    align-items: left;
+    align-items: center;
     
 }
 .Post_title p{
-    font-size: 3em;
+    font-size: 50px;
 }
-.Blog_posts .Post_photo_and_content{
+.Post_photo_and_content{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 90%;
 }
-
- .Post_photo_and_content .Date_pub_and_text{
+.Date_pub_and_text{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: center;
 }
 
-.Date_pub_and_text .Post_txt p{
+.Post_txt p{
     font-size: 1em; 
-    text-align: justify;
+    
 }
-.Date_pub_and_text .Post_date_publisher p{
+.Post_date_publisher p{
     font-size: 0.9em;  
     color:#801843;   
 }
-.Date_pub_and_text .Post_date_publisher .sp{
+.Post_date_publisher .sp{
     font-weight: bold;  
 }
 .comment_btn input[type=submit]{
@@ -53,21 +51,21 @@
     border-radius: 15px;
     font-weight: bold;
     background-color: #801843;  
-    box-shadow: 2px 2px 5px 2px  gray;i
+    box-shadow: 2px 2px 5px 2px  gray;
 }
 
 
   /* RESPONSIVENESS BELOW
 ======================== */
-/* @media only screen and(max-width:1000px){
+@media only screen and(max-width:1000px){
    .comment_btn{
-        width: 10vw;
+        width: 10em;
         font-size: 0.3em;
     }
 }
 @media only screen and(max-width:530px){
     .Post_title p{
-        margin-top: 40%;
+        
         font-size: 1.3em;
     }
     .Date_pub_and_text .Post_txt p{
@@ -76,4 +74,4 @@
     .Post_photo_and_content .Post_photo{
         width: 50%;
     }
- } */
+ }
