@@ -26,15 +26,15 @@
         <form action="" class="form_container" id="form"> 
             <h1>Edit a blog's article</h1>     
                 <label for="title ">Blog title:<span>*</span><br>
-                    <input type="text" class="title" name="title">
+                    <input type="text" class="title" name="title" id="title">
                 </label>
                 <label for="message_centent"> Article post body:<span>*</span><br>
-                <textarea class="textarea2" name="textarea" rows="6" cols="100" placeholder="Type here..."></textarea>
+                <textarea class="textarea2" id="content" name="textarea" rows="6" cols="100" placeholder="Type here..."></textarea>
                 </label>
                 <label for="photo"> Article photo:<br>
                     <input type="file"  value="upload" id="photo">
                 </label> <br>
-            <input type="submit" value="Edit">
+            <input type="submit" value="Edit" id="editbtn">
         </form>
      
     </section>

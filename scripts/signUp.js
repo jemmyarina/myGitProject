@@ -6,7 +6,9 @@ signUpForm.addEventListener('submit',(e)=>{
     const email=document.getElementById('email').value;
     const password=document.getElementById('password').value;
     const cpassword=document.getElementById('conf_password').value;
+    const role='client';
     const message=document.querySelector('.message');
+
     
     if(fname=='')
     {   message.style.display="block";
@@ -54,7 +56,7 @@ signUpForm.addEventListener('submit',(e)=>{
         .then(resultData =>{
             console.log(resultData);
             return db.collection('Users').doc(resultData.user.uid).set({
-                fname,lname,email
+                fname,lname,email,role
             })
         })
         .then(()=>{
