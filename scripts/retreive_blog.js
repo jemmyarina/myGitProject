@@ -51,25 +51,19 @@ function dataRetreived(){
 </div>
 
 `
-
     })
-
 document.getElementById("blogArticle").innerHTML=articalPost;
-
         /* Limit Text */
         var txt= $('.Post_starting_txt');
         //    var txt= document.getElementsByClassName('p');
            txt.text(function(index, currentText) {
              return currentText.substr(0, 100)+"...";
-           });
-        
+           });   
 }
-
 function triggerBlog(BlogUID){
 //   sessionStorage.setItem('blogId',blogId);
   window.location.href="../pages/blog_read_more.html?postuid="+BlogUID;
 }
-
 
 retreive();
 setTimeout(()=>{

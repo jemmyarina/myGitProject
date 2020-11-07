@@ -9,6 +9,17 @@
     flex-direction: column;
     background-color: lightslategray;
 }
+.formAndPhoto{
+    display: flex;
+    width: 50%;
+}
+.pPhoto{
+    background-image: url('../assets/user_icon.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: inset 20px 2px 2px 20px gray;
+}
 .form_container{
     display: flex;
     flex-direction: column;
@@ -28,7 +39,7 @@
     height: 20px;
 }
 label{
-    font-size: 0.7em;
+    font-size: 1em;
 }
 input[type=text], input[type=date],input[type=email] {
     width: 17em;

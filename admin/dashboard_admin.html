@@ -14,26 +14,26 @@
     <nav class="nav_top">
         <div><img src="../assets/my_logo.png" alt="logo_image"></div>
         <div class="dashboard_btn"><a href="dashboard_admin.html">Dashboard</a></div>
-        <div><a href="create_blog_admin.html"><img src="../assets/article_publish.png" alt="user icon"><p>Publish an article</p></a></div> 
-        <div><a href="manage_blogs.html"><img src="../assets/message.png" alt="message icon"><p>Manage articles</p></a></div>
-        <div><a href="manage_messages.html"><img src="../assets/message.png" alt="message icon"><p>View Messages</p></a></div>
-        <div><a href="manage_users.html"><img src="../assets/users.png" alt="user icon"><p>View users</p></a></div>  
-        <div><a href="settings.html"><img src="../assets/settings_icon.png" alt="settings icon"><p>Profile</p></a></div>
-        <div class="logout"><img src="../assets/settings_icon.png" alt="logout icon"><p>Logout</p></div>
+        <div class="welcomeUser"><span>Welcome</span><p  id="username"></p></a></div>
+        <div><a href="create_blog_admin.html"><img src="../assets/article_publish.png" alt="user icon"><p>Publish </p></a></div> 
+        <div><a href="view_blogs.html"><img src="../assets/message.png" alt="message icon"><p>Articles</p></a></div>
+        <div><a href="manage_messages.html"><img src="../assets/message.png" alt="message icon"><p>Messages</p></a></div>
+        <div><a href="manage_users.html"><img src="../assets/users.png" alt="user icon"><p>Users</p></a></div>  
+        <div><a href="../pages/sign_in.html"><img src="../assets/settings_icon.png" alt="logout icon"><p>Logout</p></a></div>
     </nav>
     <section class="section_bottom">
         <div class="left_side">
             <div class="contact_messages">
-                <div class="new_messages"><p>!!! New contact messages: <br>9</p></div>
-                <div class="total_messages"><p>Total messages: <br>700</p></div>
+                <div class="new_messages"><p>>></p></div>
+                <div class="total_messages"><p><span id="totalmessages">0</span> <br> Messages</p></div>
             </div>
             <div class="articles_published">
-                <div class="total_articles"><p>Total articles:<br>1300</p></div>
-                <div class="new_article_comments"><p>Total articles comments:<br>700</p></div>
+                <div class="total_articles"><p> Articles:<br>130</p></div>
+                <div class="new_article_comments"><p>Comments:<br>60</p></div>
             </div>
             <div class="registered_clients">
-                <div class="total_standard_users"><p>Standard users:<br>900</p></div>
-                <div class="active_users"> <p>Active users:<br>200</p>                </div>
+                <div class="total_standard_users"><p><span id="totalclients">0</span><br>Clients</p></div>
+                <div class="admin_users"> <p><span id="totaladmins">0</span><br>ADMINs</p> </div>
             </div>
         </div>
         <div class="right_side">
@@ -101,9 +101,46 @@
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
 
 <script src="../scripts/firebaseConfig.js"></script>
 <script src="../scripts/admin.js"></script>
 <script src="../scripts/main.js"></script>
+
+<script>
+    const username = sessionStorage.getItem("username");
+    document.getElementById('username').innerHTML=username;
+
+    db.collection('messages').get().then(function(m){
+    var totalmessages = m.size;
+    document.getElementById("totalmessages").innerHTML = totalmessages;
+
+    db.collection('Users').get().then(function(snapshot){
+        var childdata=snapshot.data();
+        console.log(childdata);
+        var userRole=childdata.role;
+        if(userRole ==='client'){
+            var admins = u.size;
+            document.getElementById("totalclients").innerHTML = admins;
+        }
+        else if(userRole ==='admin'){
+            var clients = u.size;
+            document.getElementById("totaladmins").innerHTML = clients;
+        }
+
+});
+});
+
+
+// var childData = snapshot.data();
+
+//         console.log(childData);
+
+//         var firstname = childData.fname;
+//         var role =childData.role;
+
+
+</script>
 </body>
-</htnl>
+</html>
+

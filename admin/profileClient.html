@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>  
 <html>  
 <head>
@@ -16,27 +17,38 @@
         <div class="dashboard_btn"><a href="dashboard_client.html">Dashboard</a></div>
         <div class="publish_article"><a href="create_blog_client.html"><img src="../assets/article_publish.png" alt="user icon"><p>Publish an article</p></a></div>
         <div><a href="view_blog_client.html"><img src="../assets/message.png" alt="message icon"><p>View articles</p></a></div>
-        <div class="settings"><a href="profileClient.html"><img src="../assets/settings_icon.png" alt="settings icon"><p>Profile</p></a></div>
+        <div class="settings"><a href="settings.html"><img src="../assets/settings_icon.png" alt="settings icon"><p>Profile</p></a></div>
         <div class="logout"><p>Logout</p> </div>
     </nav>
 
     <section class="section_bottom">
-        <h1 class="header">Publish an article</h1>
-        <form action="" class="form_container" id="form" onsubmit="event.preventDefault()"> 
-            <h4 class="errorMessage"></h4>
-           
-                <label for="title ">Blog title:<span>*</span><br>
-                    <input type="text" class="title">
-                </label>
-                
-                <label for="message_content"> Article post body:<span>*</span><br>
-                <textarea class="textarea2" name="textarea" rows="6" cols="100" placeholder="Type here..."></textarea>
-                </label>
-                <label for="photo"> Article photo:<br>
+        <h1 class="header">UPDATE ACCOUNT</h1>
+        <div class="formAndPhoto">
+            <div class="pPhoto">
+                <label for="photo"> Profile photo:<br>
                     <input type="file"  value="upload" class="photo" onchange="uploadImage(event)">
-                </label> <br>
-            <input type="submit" value="Publish" onclick="createBlog()">
-        </form>
+                </label> <br>  
+            </div>
+            <form action="" class="form_container" id="form" onsubmit="event.preventDefault()"> 
+                <h4 class="errorMessage"></h4>
+               
+                    <label for="title ">Email:<br>
+                        <input type="text" class="title">
+                    </label>
+                    <label for="title ">Password:<span>*</span><br>
+                        <input type="text" class="title" placeholder="Enter your password">
+                    </label>
+                    <label for="title ">First name:<br>
+                        <input type="text" class="title" placeholder="Enter your password">
+                    </label>
+                    <label for="title ">Last name:<span>*</span><br>
+                        <input type="text" class="title" placeholder="Enter your password">
+                    </label>
+                    
+                <input type="submit" value="Edit" onclick="createBlog()">
+            </form>
+        </div>
+        
     </section>
 </div>
 

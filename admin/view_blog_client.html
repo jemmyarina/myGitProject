@@ -4,6 +4,7 @@
 <head>
 <title>Jemima|Full stack developer</title>
 <link rel="icon" href="../assets/my_logo.png"/>
+<link rel="stylesheet" href="manage_users_and_messages.css">
 <link rel="stylesheet" href="dashboard_nav.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -13,28 +14,36 @@
     <nav class="nav_top">
         <div class="logo"><img src="../assets/my_logo.png" alt="logo_image"></div>
         <div class="dashboard_btn"><a href="dashboard_client.html">Dashboard</a></div>
-        <div class="welcomeUser"><p>Welcome</p><p id="username"></p></div>
         <div class="publish_article"><a href="create_blog_client.html"><img src="../assets/article_publish.png" alt="user icon"><p>Publish an article</p></a></div>
         <div><a href="view_blog_client.html"><img src="../assets/message.png" alt="message icon"><p>View articles</p></a></div>
         <div class="settings"><a href="profileClient.html"><img src="../assets/settings_icon.png" alt="settings icon"><p>Profile</p></a></div>
         <div class="logout"><p>Logout</p> </div>
     </nav>
     <section class="section_bottom">
-        <div><a href="#"><img src="../assets/users.png" alt="user icon"><p id="username">Users</p></a></div>  
+        <p class="ttl"> POSTS </p>
+        <hr>
+
+        <table class="usersTable">
+            <thead>   
+                <tr>
+                   
+                    <th>POST DATE</th>
+                    <th>POST TITLE</th>
+                    <th>PUBLISHER</th>
+                     
+                </tr>
+            </thead>
+     
+          </table>
     </section>
 </div>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
 
 <script src="../scripts/firebaseConfig.js"></script>
-<script src="../scripts/logout_client.js"></script>
-<script src="../scripts/main.js"></script>
-<script>
-     const username = sessionStorage.getItem("username");
-    document.getElementById('username').innerHTML=username;
-  
-</script>
+<script src="../scripts/view_blogs_client.js"></script>
+<script src="../scripts/admin.js"></script>
 </body>
 </htnl>
-sc

@@ -28,6 +28,14 @@
     color: white;
     font-size:1.3em;
 }
+.welcomeUser{
+    font-size:1.3em;
+    color: orange;
+}
+.welcomeUser span{
+font-size: 0.8em;
+color: orange;
+}
  .dashboard_btn{
     display: flex;
     /* justify-content: space-between; */
