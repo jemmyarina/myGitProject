@@ -45,7 +45,6 @@ function editBlog(blogId){
                 <td> ${doc.data().post_title}</td>
                 <td> ${doc.data().pub_names}</td>
             </tr>    
-            <td ><input type="submit" value="More" class="edit" onclick=readmore('${doc.id}')></td> 
         `
         messagesList.appendChild(articlesRow);
         //   "<tr> <td>"+ doc.data().role +"</td> <td>"+ doc.data().email +"</td> <td class='all-btn' ><button  onclick='viewContent()' class='button button1'> "+ 'View' +" </button> <button  onclick='editContent()' class='button button2'>"+ 'Edit' +"</button> <button onclick='deletePost()' class='button button3'>"+ 'Delete' +"</button> </td> </tr>" 
