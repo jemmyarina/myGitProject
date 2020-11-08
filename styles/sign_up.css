@@ -50,27 +50,6 @@ input[type=submit] {
     text-decoration: none;
     font-size: 1.5rem;
 }
-
-
-    /* RESPONSIVENESS BELOW
-========================
- */
-.hamburger_button {
-
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    top: 3em;
-    right: 4em;
-    width: 2em;
-    height: 3em;
-  }
-  .hamburger_button .bar {
-  height: 0.6em;
-  width: 4.7em;
-  background-color:  #801843;
-  border-radius: 10px;
-  }
-
+ 
+  /* ==========================RESPONSIVENESS BELOW=====================*/
 
