@@ -1,0 +1,54 @@
+.Blog_posts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    background-color: green;
+}
+/* ..........comments......... */
+/* .cform{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    height: 500px; 
+    box-sizing: solid 2px 2px 2px 1px gray;
+} */
+.comment-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    height: 300px; 
+    box-shadow: 5px 5px 11px 5px #3B3C54;
+    border-radius: 15px;
+    /* display: none; */
+}
+input [type=textarea]{
+    width: 500px;
+}
+/* ============================= */
+ 
+  /* RESPONSIVENESS BELOW
+======================== */
+/* @media only screen and(max-width:1000px){
+   .comment_btn{
+        width: 10em;
+        font-size: 0.3em;
+    }
+}
+@media only screen and(max-width:530px){
+    .Post_title p{
+        
+        font-size: 1.3em;
+    }
+    .Date_pub_and_text .Post_txt p{
+        font-size: 0.3em; 
+    }
+    .Post_photo_and_content .Post_photo{
+        width: 50%;
+    }
+ } */

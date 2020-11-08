@@ -21,8 +21,37 @@ auth.signInWithEmailAndPassword(email, password).then(resultData=>{
     // console.log(resultData);
     const uid= resultData.user.uid; 
     signInForm.reset();
-    location.href="../admin/create_blog_client.html";
+    // location.href="../admin/dashboard_client.html";
     // message.style.display="block";
+
+    db.collection("Users").doc(uid).get().then( function(snapshot){
+  
+        var childData = snapshot.data();
+
+        console.log(childData);
+
+        var firstname = childData.fname;
+        var lastname = childData.lname;
+        var role = childData.role;
+        
+        // var email = childData.email;
+        // sessionStorage.setItem("fname", firstname);  
+        if(role === 'client'){
+            sessionStorage.setItem("userUID", uid);
+            // sessionStorage.setItem("userEmail", email);
+            sessionStorage.setItem("username", firstname);     
+            window.location.href = "../admin/dashboard_client.html";
+        }
+        else if(role === 'admin'){
+            sessionStorage.setItem("userUID", uid);
+            // sessionStorage.setItem("userEmail", email);
+            sessionStorage.setItem("userFname", firstname);  
+            essionStorage.setItem("userLname", lastname);  
+ 
+            window.location.href="../admin/dashboard_admin.html";
+        }
+       
+        });
 })
 .catch(error=>{
     message.style.display="block";
@@ -30,3 +59,6 @@ auth.signInWithEmailAndPassword(email, password).then(resultData=>{
 });
 }
 })
+
+localStorage.setItem('userId', id);
+

@@ -1,7 +1,8 @@
 let dataId = localStorage.getItem('dataId');
+const bform=document.getElementById('form');
 
 const title = document.getElementById('title');
-const content = document.getElementById('content');
+const content = document.getElementById('textarea2');
 
 db.collection('Blog_articles').doc(dataId).get().then((snapshot) => {
 
@@ -9,66 +10,49 @@ title.value = snapshot.data().post_title,
 content.innerHTML = snapshot.data().post_textarea2
 });
 
+// .........EDITING..........
+let articleImage=[];
+document.getElementById('editbtn').onclick=(event)=>{
+    let input=document.createElement('input');
+    input.type='file';
+
+    input.onchange=(event)=>{
+        articleImage=event.target.articleImage;
+    }
+    input.click();
+}
+    // if(event.target.files[0]!=null){
+        // articleImage=event.target.files[0];
+    // }
+// }
+
 document.getElementById('editbtn').onclick=()=>{
-    var username = sessionStorage.getItem(username);
-    let articleImage;
-function uploadImage(event){
-    if(event.target.files[0]!=null){
-        articleImage=event.target.files[0];
-    }
-    
-}
+// var username = sessionStorage.getItem(username);
 
-const bform=document.getElementById('form');
-const post_title=document.getElementsByClassName('title')[0];
-const post_textarea2=document.getElementsByClassName('textarea2')[0];
-const post_photo=document.getElementsByClassName('photo')[0];
-const errorMessage=document.querySelector('.errorMessage');
-const articleId=uniqueid();
+const post_title= document.getElementById('title').value;
+const post_textarea2=document.getElementById('textarea2').value;
+// const post_photo=document.getElementById('photo').value;
+// const errorMessage=document.querySelector('.errorMessage');
 
-function createBlog(){
-   
-  if(post_title.value==''){
-        errorMessage.style.display="block";
-        errorMessage.style.backgroundColor="crimson";
-        errorMessage.innerHTML="Fill the post TITLE";
-       
-    }
-    else if(post_textarea2.value==''){
-        errorMessage.style.display="block";
-        errorMessage.style.backgroundColor="crimson";
-        errorMessage.innerHTML="Fill the post BODY";
-        return false;
-    }
-    else{
-        storage.ref(`blogs/${articleId}/articleImage.jpg`).put(articleImage)
-        .then(()=>{
-            db.collection("Blog_articles").doc(`${articleId}`).update({
+let articleId=dataId;
 
-                pub_names:username,
-                post_title:post_title.value,
-                post_date:new Date().getTime(),
-                post_textarea2:post_textarea2.value,
-                post_photo:`blogs/${articleId}/articleImage.jpg`
-                })
-                console.log(pub_names.value)
-                errorMessage.style.display="block";
-                errorMessage.style.backgroundColor="lightblue";
-                errorMessage.innerHTML="Article saved successfull";
-        })
-        .catch((error)=>{
-            alert(error)
-        })        
-    }
-}
+console.log(post_title);
+console.log(post_textarea2);
+ 
 
-function uniqueid() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-      var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-      return v.toString(16);
+// let uploadImage = storage.ref(`blogs/${articleId}/articleImage.jpg`).put(articleImage[0]);
+
+// uploadImage.on('state_changed',()=>{
+    db.collection("Blog_articles").doc(`${articleId}`).update({
+
+        // pub_names:username,
+        post_title:post_title,
+        // date_modified : new Date().getTime(),
+        post_textarea2:post_textarea2,
+        // post_photo:`blogs/${articleId}/articleImage.jpg`
+    })
+    .then(()=>{
+        console.log('blog edited');
     });
-  }
 
 }
-
-createBlog();

@@ -2,12 +2,11 @@ var username = sessionStorage.getItem(username);
 console.log(username)
 
 let articleImage;
-// let articles=[];
+
 function uploadImage(event){
     if(event.target.files[0]!=null){
         articleImage=event.target.files[0];
     }
-    
 }
 
 const bform=document.getElementById('form');
@@ -51,13 +50,9 @@ function createBlog(){
         })
         .catch((error)=>{
             alert(error)
-        })    
-        
+        })       
          
     }
-
-    
-
 }
 
 function uniqueid() {

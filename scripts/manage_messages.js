@@ -19,7 +19,7 @@ function manageMessages() {
             
           ` 
     <tr class="row">
-        <td>1</td>
+        
         <td> ${doc.data().Email}</td>
         <td> ${doc.data().Message}</td>
         <td>${doc.data().Name}</td>

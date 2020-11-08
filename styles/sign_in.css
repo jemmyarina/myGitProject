@@ -6,14 +6,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5em;
+    margin: 5px 5px; 
+    width: 80%;
+    
 }
 .user_icon{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-top: 3em; */
-    height: auto;
   }
 
 /*//////////////user title underlined/////////////////  */
@@ -25,15 +25,15 @@
 }
 .sign_in_txt_and_line .line1{
     border-bottom: 2px solid #801843;
-    border-left: 15em solid #C4C4C4;
+    border-right: 9em solid #C4C4C4;
 }
 .sign_in_txt_and_line .sign_in_txt_head{
     color: #74440C;
-    font-size: 1.7em;
+    font-size: 1.5em;
 }
 .sign_in_txt_and_line .line2{
     border-bottom: 2px solid #C4C4C4;
-    border-right: 15em solid #801843;
+    border-right: 9em solid #801843;
 }
 
   
@@ -45,14 +45,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width:24em;
-    height: 55vh;
+    width:24rem;
     box-shadow: 2px 2px  5px 2px gray;
     border-radius: 10px;
     padding: 50px 0px 50px 0px;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    /* box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.09); */
-    /* margin: 0 auto; */
+ 
 }
  
 .form_container .form_fields{
@@ -60,13 +58,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 20em;
-    /* margin: auto auto; */
+    width: 20rem;
     background-color: #818080;
 }
 input[type=email], input[type=password]{
    width: 17em;
-   height: 3em;
+   height: 2.1em;
 }
 input[type=submit] {
     background-color: #3e1f26;
@@ -78,9 +75,7 @@ input[type=submit] {
     margin-top: 2em;
     border-radius: 10em;
     text-decoration: none;
-
     padding: 1px 0px 1px 0px;
-    /* margin-top: 20px; */
 }
 .verify_credentials{
     display: flex;
@@ -90,7 +85,7 @@ input[type=submit] {
     margin-top: 20px;
 }
 .verify_credentials a{
-    font-size: 1em;  
+    font-size: 0.9em;  
     color: orangered;
     margin-left: 3em;
 }

@@ -106,14 +106,6 @@ input[type=submit]:hover {
 }
 
 /* ==============SIGNING IN AND SOCIAL MEDIA================ */
-/* .social_media_and_join_btn{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: auto;
-    margin-right: 1vw;
-    } */
     .social_media_and_join_btn ul {
         list-style: none;
         line-height: 3em;
@@ -141,8 +133,6 @@ input[type=submit]:hover {
 
    
 @media only screen and (max-width:1200px){
-    /* ============New page layout below================= */
-     
       .wrapper{
           display: flex;
           flex-direction: column;
