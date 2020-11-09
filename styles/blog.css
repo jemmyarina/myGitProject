@@ -1,5 +1,15 @@
 
 /* POSTS GROUPING*/
+/* .loading{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+} */
+.loading img{
+    width: 200%;
+}
+
+
 .Blog_posts{
     display: flex;
     justify-content: space-between;
@@ -88,6 +98,7 @@ input[type=submit] {
     font-weight: bold;
 }
 /* RIGHT SIDE(POPULAR POSTS)  */
+
 .right_side_pop_soc{
     display: flex;
     justify-content: space-between;
