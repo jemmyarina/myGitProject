@@ -61,10 +61,6 @@ signUpForm.addEventListener('submit',(e)=>{
         })
         .then(()=>{
             signUpForm.reset(); 
-            message.style.display="block";
-            message.style.backgroundColor="green";
-            // message.innerHTML="User registered successfully!";
-            // alert("User registered successfully!");
             window.location.href="../pages/sign_in.html";
         })
         .catch(error=>{

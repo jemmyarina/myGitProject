@@ -33,13 +33,12 @@ auth.signInWithEmailAndPassword(email, password).then(resultData=>{
         var firstname = childData.fname;
         var lastname = childData.lname;
         var role = childData.role;
-        
-        // var email = childData.email;
-        // sessionStorage.setItem("fname", firstname);  
+         
         if(role === 'client'){
             sessionStorage.setItem("userUID", uid);
             // sessionStorage.setItem("userEmail", email);
-            sessionStorage.setItem("username", firstname);     
+            sessionStorage.setItem("username", firstname+' '+lastname); 
+            // sessionStorage.setItem("username", firstname);     
             window.location.href = "../admin/dashboard_client.html";
         }
         else if(role === 'admin'){
@@ -54,8 +53,9 @@ auth.signInWithEmailAndPassword(email, password).then(resultData=>{
         });
 })
 .catch(error=>{
-    message.style.display="block";
-            message.innerHTML=error.message;
+    // message.style.display="block";
+    // message.innerHTML=error.message;
+    alert(error.message);
 });
 }
 })
