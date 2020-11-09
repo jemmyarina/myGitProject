@@ -1,7 +1,7 @@
 .Blog_posts{
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: green;
@@ -41,7 +41,7 @@
 .Post_date_publisher .sp{
     font-weight: bold;  
 }
-.comment_btn input[type=submit]{
+.comment_btn{
     width: 300px;
     height: 70px; 
     border: none;

@@ -46,7 +46,13 @@
 		<div class="Blog_posts" id="post">
             
 		</div>
-		<button type='submit' id="commentbtn"> Login to comment</button>
+		<!-- <div class="comment_btn"> -->
+			<!-- <button type="submit" value="Login to comment"> 
+				<a href="../pages/sign_in.html"  ></a>
+			</button> -->
+			<button onclick="document.location='../pages/sign_in.html'" class="comment_btn"> Login to comment</button>
+		<!-- </div> -->
+	
  	</section>	
 </div> 
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
@@ -57,5 +63,9 @@
 <script src="../scripts/firebaseConfig.js"></script>
 <script src="../scripts/main.js"></script>
 <script src="../scripts/blog_redirectional.js"></script>
+
+<script>
+	document.getElementsByClassName('comment_btn')
+</script>
 </body>
 </html>  
