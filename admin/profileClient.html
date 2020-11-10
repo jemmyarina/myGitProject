@@ -15,42 +15,45 @@
     <nav class="nav_top">
         <div class="logo"><img src="../assets/my_logo.png" alt="logo_image"></div>
         <div class="dashboard_btn"><a href="dashboard_client.html">Dashboard</a></div>
+        <div class="welcomeUser"><p>Welcome</p><p id="welcomeUser"></p></div>
         <div class="publish_article"><a href="create_blog_client.html"><img src="../assets/article_publish.png" alt="user icon"><p>Publish an article</p></a></div>
         <div><a href="view_blog_client.html"><img src="../assets/message.png" alt="message icon"><p>View articles</p></a></div>
-        <div class="settings"><a href="settings.html"><img src="../assets/settings_icon.png" alt="settings icon"><p>Profile</p></a></div>
+        <div class="settings"><a href="profileClient.html"><img src="../assets/settings_icon.png" alt="settings icon"><p>Profile</p></a></div>
         <div class="logout"><p>Logout</p> </div>
     </nav>
 
     <section class="section_bottom">
         <h1 class="header">UPDATE ACCOUNT</h1>
         <div class="formAndPhoto">
-            <div class="pPhoto">
-                <label for="photo"> Profile photo:<br>
-                    <input type="file"  value="upload" class="photo" onchange="uploadImage(event)">
-                </label> <br>  
-            </div>
+            
             <form action="" class="form_container" id="form" onsubmit="event.preventDefault()"> 
                 <h4 class="errorMessage"></h4>
                
                     <label for="title ">Email:<br>
-                        <input type="text" class="title">
+                        <input type="text" class="title" id="email" disabled>
                     </label>
-                    <label for="title ">Password:<span>*</span><br>
-                        <input type="text" class="title" placeholder="Enter your password">
-                    </label>
+                    <!-- <label for="title ">Password:<span>*</span><br>
+                        <input type="text" class="title" placeholder="Enter your password" id="password">
+                    </label> -->
                     <label for="title ">First name:<br>
-                        <input type="text" class="title" placeholder="Enter your password">
+                        <input type="text" class="title" placeholder="Enter your password" id="fname">
                     </label>
                     <label for="title ">Last name:<span>*</span><br>
-                        <input type="text" class="title" placeholder="Enter your password">
+                        <input type="text" class="title" placeholder="Enter your password" id="lname">
                     </label>
-                    
-                <input type="submit" value="Update" onclick="createBlog()">
+                    <div class="pPhoto">
+                        <label for="photo"> Profile photo:<br>
+                            <input type="file"  value="upload" class="photo">
+                        </label> <br> <br> 
+                    </div>
+                <input type="submit" value="Update" onclick="updateProfile()">
             </form>
         </div>
         
     </section>
 </div>
+
+
 
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
@@ -61,8 +64,45 @@
 <!-- <script defer src="./init-firebase.js"></script>  WE HAVE IT BELOW-->
 
 <script src="../scripts/firebaseConfig.js"></script>
-<script src="../scripts/create_blog.js"></script>
 <script src="../scripts/logout_client.js"></script>
 
+<script>
+    const username = sessionStorage.getItem("clientNames");
+   document.getElementById('welcomeUser').innerHTML=username;
+   const uid = sessionStorage.getItem('userUID');
+   console.log(uid);
+
+   const yourEmail = document.getElementById('email');
+    const yourFname = document.getElementById('fname');
+    const yourLname = document.getElementById('lname');
+
+    db.collection('Users').doc(uid).get().then((snapshot) => {
+    yourEmail.value = snapshot.data().email, 
+    yourFname.value = snapshot.data().fname, 
+    yourLname.value = snapshot.data().lname
+
+    });
+
+
+</script>
+
+
+<!-- <script>
+    const uid = localStorage.getItem('userUID');
+    // const bform=document.querySelector('#form');
+    const yourEmail = document.getElementById('email');
+    const yourFname = document.getElementById('fname');
+    const yourLname = document.getElementById('lname');
+
+    db.collection('Users').doc(uid).get().then((snapshot) => {
+    yourEmail.value = snapshot.data().email, 
+    yourFname.value = snapshot.data().fname, 
+    yourLname.value = snapshot.data().lname
+
+    });
+</script> -->
+
 </body>
-</htnl>
+</html>
+
+

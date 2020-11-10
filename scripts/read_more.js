@@ -1,4 +1,3 @@
-
 function fetchDisplayBlog(){
     let triggedBlogId = sessionStorage.getItem('blogId');
     db.collection("Blog_articles").doc(`${triggedBlogId}`).get().then((article)=>{

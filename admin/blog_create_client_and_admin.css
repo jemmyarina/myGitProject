@@ -4,6 +4,9 @@
     padding: 0px;
     font-family: 'Poppins', sans-serif;
 }
+:focus{
+    outline: none;
+}
 .section_bottom{
     display: flex;
     flex-direction: column;

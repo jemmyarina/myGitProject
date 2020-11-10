@@ -21,8 +21,9 @@ function deletePost(blogId){
 function editBlog(blogId){
     console.log(blogId);
 
-    localStorage.setItem('dataId',blogId);
-    window.location.href = 'editBlog.html';
+    // localStorage.setItem('dataId',blogId);
+    // window.location.href = 'editBlog.html';
+    window.location.href = "editBlog.html?postuid=" + blogId;
 }
 
 // ................................
@@ -36,19 +37,19 @@ function editBlog(blogId){
     const messagesList = document.querySelector('table')
     db.collection("Blog_articles").get().then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
-        const articlesRow=document.createElement('tBody');
+        const articlesRow = document.createElement('tBody');
+        var post_date = new Date (doc.data().post_date).toLocaleString();
         articlesRow.innerHTML+= 
             
           ` 
             <tr class="row">
-                <td> ${doc.data().post_date}</td>
+                <td> ${post_date }</td>
                 <td> ${doc.data().post_title}</td>
                 <td> ${doc.data().pub_names}</td>
                 
                 <td ><input type="submit" value="Delete" onclick=deletePost('${doc.id}')></td>
                 <td ><input type="submit" value="Edit" class="edit" onclick=editBlog('${doc.id}')></td> 
             </tr>    
-    
         `
         messagesList.appendChild(articlesRow);
         //   "<tr> <td>"+ doc.data().role +"</td> <td>"+ doc.data().email +"</td> <td class='all-btn' ><button  onclick='viewContent()' class='button button1'> "+ 'View' +" </button> <button  onclick='editContent()' class='button button2'>"+ 'Edit' +"</button> <button onclick='deletePost()' class='button button3'>"+ 'Delete' +"</button> </td> </tr>" 

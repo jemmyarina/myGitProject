@@ -14,7 +14,7 @@
     <nav class="nav_top">
         <div><img src="../assets/my_logo.png" alt="logo_image"></div>
         <div class="dashboard_btn"><a href="dashboard_admin.html">Dashboard</a></div>
-        <div class="welcomeUser"><span>Welcome</span><p  id="username"></p></a></div>
+        <div class="welcomeUser"><span>Welcome</span><p  id="welcomeUser"></p></a></div>
         <div><a href="create_blog_admin.html"><img src="../assets/article_publish.png" alt="user icon"><p>Publish </p></a></div> 
         <div><a href="view_blogs.html"><img src="../assets/message.png" alt="message icon"><p>Articles</p></a></div>
         <div><a href="manage_messages.html"><img src="../assets/message.png" alt="message icon"><p>Messages</p></a></div>
@@ -108,8 +108,9 @@
 <script src="../scripts/main.js"></script>
 
 <script>
-    const username = sessionStorage.getItem("username");
-    document.getElementById('username').innerHTML=username;
+    const firstname = sessionStorage.getItem("adminFname");
+
+    document.getElementById('welcomeUser').innerHTML=firstname;
 
     db.collection('messages').get().then(function(m){
     var totalmessages = m.size;
@@ -120,11 +121,11 @@
         console.log(childdata);
         var userRole=childdata.role;
         if(userRole ==='client'){
-            var admins = u.size;
+            var admins = snapshot.size;
             document.getElementById("totalclients").innerHTML = admins;
         }
         else if(userRole ==='admin'){
-            var clients = u.size;
+            var clients = snapshot.size;
             document.getElementById("totaladmins").innerHTML = clients;
         }
 
