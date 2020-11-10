@@ -9,6 +9,9 @@
     width: 200%;
 }
 
+:focus{
+    outline: none;
+}
 
 .Blog_posts{
     display: flex;

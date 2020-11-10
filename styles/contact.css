@@ -1,3 +1,6 @@
+:focus{
+    outline: none;
+}
 
 .contact_body{
     display: flex;
