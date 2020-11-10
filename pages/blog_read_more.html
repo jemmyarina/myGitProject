@@ -53,6 +53,18 @@
 			<button onclick="document.location='../pages/sign_in.html'" class="comment_btn"> Login to comment</button>
 		<!-- </div> -->
 	
+		<form class="comment-form">
+			<h3>All Comments here</h3>
+			<label for="email">Email
+				<input type="email" name="email" id="email-field">
+			</label>
+			<br>
+			<label for="comments">
+				<textarea name="comment" id="carea" cols="50" rows="10"></textarea>
+			</label><br>
+			<button type="submit" id="submitbtn">Submit</button>
+		</form>
+		
  	</section>	
 </div> 
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>

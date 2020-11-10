@@ -33,32 +33,31 @@ auth.signInWithEmailAndPassword(email, password).then(resultData=>{
         var firstname = childData.fname;
         var lastname = childData.lname;
         var role = childData.role;
+        var email = childData.email;
          
         if(role === 'client'){
             sessionStorage.setItem("userUID", uid);
-            // sessionStorage.setItem("userEmail", email);
-            sessionStorage.setItem("username", firstname+' '+lastname); 
-            // sessionStorage.setItem("username", firstname);     
+            sessionStorage.setItem("clientEmail", email);
+            sessionStorage.setItem("clientNames", firstname+' '+lastname);   
+            sessionStorage.setItem("clientFname", firstname);  
+            sessionStorage.setItem("clientLname", lastname);  
             window.location.href = "../admin/dashboard_client.html";
         }
         else if(role === 'admin'){
             sessionStorage.setItem("userUID", uid);
-            // sessionStorage.setItem("userEmail", email);
-            sessionStorage.setItem("userFname", firstname);  
-            essionStorage.setItem("userLname", lastname);  
- 
+            sessionStorage.setItem("adminEmail", email);
+            sessionStorage.setItem("adminFname", firstname);  
+            sessionStorage.setItem("adminLname", lastname);  
             window.location.href="../admin/dashboard_admin.html";
         }
        
         });
 })
 .catch(error=>{
-    // message.style.display="block";
-    // message.innerHTML=error.message;
+    
     alert(error.message);
 });
 }
 })
 
-localStorage.setItem('userId', id);
-
+// localStorage.setItem('dataId', id);

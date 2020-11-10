@@ -1,58 +1,50 @@
-let dataId = localStorage.getItem('dataId');
-const bform=document.getElementById('form');
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  }
+  
+  var blogId = getUrlParameter("postuid");
+//   var image = document.querySelector(".image");
+  db.collection("Blog_articles").doc(blogId).get().then(function (snapshot) {
+  
+    var childData = snapshot.data();
+    console.log(blogId);
 
-const title = document.getElementById('title');
-const content = document.getElementById('textarea2');
+    document.getElementById("form").title.value = childData.post_title;
+    document.getElementById("form").textarea2.value = childData.post_textarea2;
 
-db.collection('Blog_articles').doc(dataId).get().then((snapshot) => {
+    // image.src = childData.photo;
+  });
 
-title.value = snapshot.data().post_title, 
-content.innerHTML = snapshot.data().post_textarea2
-});
+const blog = document.querySelector('#form');
 
-// .........EDITING..........
-let articleImage=[];
-document.getElementById('editbtn').onclick=(event)=>{
-    let input=document.createElement('input');
-    input.type='file';
+blog.addEventListener('submit', (e) => {
 
-    input.onchange=(event)=>{
-        articleImage=event.target.articleImage;
+    e.preventDefault();
+  
+    const title = blog['title'].value;
+    const content = blog['textarea2'].value;
+    // if (file) return updateWithImage(title, content);
+    updatePost(title, content);
+  
+  
+  
+  });
+  
+  
+  function updatePost(title, content) {
+    var blogData = {
+      post_title:title,
+      post_textare2:content,
+      date_modified: new Date().getTime()
     }
-    input.click();
-}
-    // if(event.target.files[0]!=null){
-        // articleImage=event.target.files[0];
-    // }
-// }
-
-document.getElementById('editbtn').onclick=()=>{
-// var username = sessionStorage.getItem(username);
-
-const post_title= document.getElementById('title').value;
-const post_textarea2=document.getElementById('textarea2').value;
-// const post_photo=document.getElementById('photo').value;
-// const errorMessage=document.querySelector('.errorMessage');
-
-let articleId=dataId;
-
-console.log(post_title);
-console.log(post_textarea2);
- 
-
-// let uploadImage = storage.ref(`blogs/${articleId}/articleImage.jpg`).put(articleImage[0]);
-
-// uploadImage.on('state_changed',()=>{
-    db.collection("Blog_articles").doc(`${articleId}`).update({
-
-        // pub_names:username,
-        post_title:post_title,
-        // date_modified : new Date().getTime(),
-        post_textarea2:post_textarea2,
-        // post_photo:`blogs/${articleId}/articleImage.jpg`
-    })
-    .then(()=>{
-        console.log('blog edited');
+    db.collection("Blog_articles").doc(blogId).update(blogData).catch(function (error) {
+      console.error("Error adding document: ", error);
+    }).then(function () {
+      alert('successful updated!');
+      window.location.href = "view_blogs.html";
     });
-
-}
+  
+  }

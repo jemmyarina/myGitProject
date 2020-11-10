@@ -4,6 +4,10 @@
     padding: 0px;
     font-family: 'Poppins', sans-serif;
 }
+:focus{
+    outline: none;
+}
+
 .wrapper{
     display: flex;
     flex-direction: column;

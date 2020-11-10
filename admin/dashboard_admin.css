@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:focus{
+    outline: none;
+}
+
 /* ============BOTTOM LEFT SIDE================= */
 .left_side{
     display: flex;
