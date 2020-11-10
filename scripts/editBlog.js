@@ -25,19 +25,16 @@ blog.addEventListener('submit', (e) => {
     e.preventDefault();
   
     const title = blog['title'].value;
-    const content = blog['textarea2'].value;
+    const content = blog['textarea2'].value; 
     // if (file) return updateWithImage(title, content);
     updatePost(title, content);
-  
-  
-  
   });
   
   
   function updatePost(title, content) {
     var blogData = {
       post_title:title,
-      post_textare2:content,
+      post_textarea2:content,
       date_modified: new Date().getTime()
     }
     db.collection("Blog_articles").doc(blogId).update(blogData).catch(function (error) {

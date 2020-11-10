@@ -1,3 +1,6 @@
+:focus{
+    outline: none;
+}
 
 /* FORM CODES START BELOW: */
 .border_all{
