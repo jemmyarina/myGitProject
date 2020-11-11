@@ -9,9 +9,6 @@
     width: 200%;
 }
 
-:focus{
-    outline: none;
-}
 
 .Blog_posts{
     display: flex;
@@ -27,7 +24,7 @@
     flex-direction: column;
     align-items: center;
     width: 70%;
-    height: auto;
+    /* height: auto; */
 }
 .Blog_latest_group .Latest_title{
     display: flex;
@@ -107,7 +104,7 @@ input[type=submit] {
     justify-content: space-between;
     align-items: center;
     width: 27%;
-    height: auto;
+    /* height: auto; */
 }
  .Blog_posts .right_side_pop_soc .Blog_popular_container{
     display: flex;
