@@ -16,13 +16,10 @@ if(email=='')
     }
     else{
 
-  
-auth.signInWithEmailAndPassword(email, password).then(resultData=>{
-    // console.log(resultData);
+    auth.signInWithEmailAndPassword(email, password).then(resultData=>{
+
     const uid= resultData.user.uid; 
     signInForm.reset();
-    // location.href="../admin/dashboard_client.html";
-    // message.style.display="block";
 
     db.collection("Users").doc(uid).get().then( function(snapshot){
   
@@ -59,5 +56,3 @@ auth.signInWithEmailAndPassword(email, password).then(resultData=>{
 });
 }
 })
-
-// localStorage.setItem('dataId', id);

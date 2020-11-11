@@ -1,7 +1,9 @@
 :focus{
     outline: none;
 }
-
+.errorMessage{
+    background-color: red;
+}
 .Blog_posts{
     display: flex;
     flex-direction: column;
@@ -45,18 +47,78 @@
     font-weight: bold;  
 }
 .comment_btn{
-    width: 300px;
-    height: 70px; 
-    border: none;
+    width: 200px;
+    height: 50px; 
     color: white;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1em;
     border-radius: 15px;
     font-weight: bold;
     background-color: #801843;  
     box-shadow: 2px 2px 5px 2px  gray;
 }
 
+.cContainer{
+    display: flex;
+    flex-direction: column;;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.commentsInput{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.commentsOutput{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+   
+}
+.commentContainer{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+}
+.cContent{
+    overflow: scroll;
+    resize: none;
+}
+
+.cDetails{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-left: 1px solid gray;
+    border-bottom: 3px solid gray;
+    margin-left: 10px;
+    box-shadow: 2px 2px 4px 2px lightgray;
+}
+.cDateClient{
+    padding-bottom:10px;
+    font-size: 0.7em;
+    color: #801843;
+   
+}
+.cDateClient span{
+    font-weight: bold;
+}
+
+.replyContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.replyForm{
+    overflow: scroll;
+    resize: none;
+}
 
   /* RESPONSIVENESS BELOW
 ======================== */

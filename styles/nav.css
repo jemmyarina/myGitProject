@@ -96,6 +96,9 @@
     background-color: #E5E5E5E5;
 }
 .page_bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 10%;
     background-color: #801843;
