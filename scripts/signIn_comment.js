@@ -27,13 +27,10 @@ if(email=='')
         var lastname = childData.lname;
         var lnameUpper = lastname.substring(0, 1);
         var firstname = childData.fname;
-        var emailFetched = childData.email;
 
         sessionStorage.setItem("userUID", uid);
         sessionStorage.setItem("uNames", lnameUpper+ '.' +firstname);
-        sessionStorage.setItem("userEmail", emailFetched);
-    
-        window.location.href = "../pages/blog_read_more.html";
+ 
        
         });
 })

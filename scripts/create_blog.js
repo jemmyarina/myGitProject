@@ -1,4 +1,4 @@
-var username = sessionStorage.getItem(username);
+var username = sessionStorage.getItem("firstname");
 console.log(username)
 
 let articleImage;

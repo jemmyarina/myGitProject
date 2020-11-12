@@ -1,6 +1,16 @@
 function fetchDisplayBlog(){
     let triggedBlogId = sessionStorage.getItem('blogId');
     db.collection("Blog_articles").doc(`${triggedBlogId}`).get().then((article)=>{
+
+        const imgURL = 
+
+        storage.ref(article.data().post_photo).getDownloadURL().then((blogImageUrl)=>{
+       
+        }).catch((downUrlError)=>{
+            console.log(downUrlError)
+        })
+
+
         firebase.storage().ref(article.data().post_photo).getDownloadURL().then((image)=>{
           let blogContainer = `
           <div class="Blog_posts">
@@ -35,3 +45,4 @@ function fetchDisplayBlog(){
       }
       
     fetchDisplayBlog();
+    

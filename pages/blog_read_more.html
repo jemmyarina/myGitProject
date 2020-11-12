@@ -43,13 +43,13 @@
 		<div class="page_bar">
 			<p>BLOG</p>
 			<p class="welcomeUser"><p id="welcomeUser"></p></p>
-			<button id="logoutReading">Logout</button>  
+			<button class="logout">Logout</button>  
 		</div>
 		<div class="Blog_posts" id="post">
             
 		</div>
 	 
-		<button onclick="document.location='../pages/sign_in_comment.html'" id="comment_btn"> Login to comment</button>
+		<button id="comment_btn"> Login to comment</button>
 		<p class="errorMessage"></p>
 		<!-- <div class="cContainer"> -->
 			<div class="commentsInput">
@@ -63,13 +63,17 @@
 			</div>
 
 			<div class="commentsOutput">
-				<div class="commentContainer">
+				<!-- <div class="commentContainer"> -->
 					<!-- <div class="comment"> -->
 						<div class="cPhoto">
-							<img src="../assets/commenter.png" alt="Post image" style="width: 60px;">
+							<img src="../assets/commenter.png" alt="Post image">
 						</div>
 						<div class="cDetails">
-							<p class="cDateClient"> 07/11/2020 by <span> James Mugabo</span> </p>
+							<div class="cDateClient">
+								<p> 07/11/2020</p>
+								<span> James Mugabo</span>
+							</div>
+							
 							<p class="cBody">Nice blog! Thank youuuuuuuuuuuuuuuuuu uu adfa sadf sdfa dfa fa sdfad fadf adf adf asfa sdfa sdfas dfad fadf adf uuuuu uuuuuuuuuuu wqwerw rt wrrt qwrt wrt wrtw rtwe rtwr twer twer twruuuu!</p> 
 						</div>
 					<!-- </div> -->
@@ -104,30 +108,26 @@
 
 
 <script>
-	
 
 	// disabling and enabling commenting button
-	var userId = sessionStorage.getItem('userUID');
+	// var userId = sessionStorage.getItem('userUID');
 
-	if(userId){
-		document.getElementById("submitbtn").disabled = false;
-		document.getElementById("comment_btn").hidden = true;
-	}
-	else{
-		document.getElementById("submitbtn").disabled = true;
-	}
-	
-	// document.getElementsByClassName('comment_btn')
+	// if(userId){
+	// 	document.getElementById("submitbtn").disabled = false;
+	// 	document.getElementById("comment_btn").hidden = true;
+	// }
+	// else{
+	// 	document.getElementById("submitbtn").disabled = true;
+	// }
 
-	// displaying a user name of a page after logging in
-	const username = sessionStorage.getItem("uNames");
+	const username = sessionStorage.getItem("userFname");
 	let userUpperCase = username.toUpperCase();
 	document.getElementById('welcomeUser').innerHTML = userUpperCase;
 	// document.getElementById('email-field').innerHTML = email;
 
-	function showComments() {
-	document.getElementsByClassName("commentsOutput").style.visibility = "hidden";
-	}
+	// function showComments() {
+	// document.getElementsByClassName("commentsOutput").style.visibility = "hidden";
+	// }
 
 	
 	// // LOGOUT
