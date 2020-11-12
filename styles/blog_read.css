@@ -1,6 +1,11 @@
 :focus{
     outline: none;
 }
+.cPhoto img{
+    width: 60px;
+}
+				
+
 .errorMessage{
     background-color: red;
 }

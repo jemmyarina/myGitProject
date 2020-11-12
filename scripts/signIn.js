@@ -30,24 +30,33 @@ if(email=='')
         var firstname = childData.fname;
         var lastname = childData.lname;
         var role = childData.role;
-        var email = childData.email;
-         
+       
+        //get blogid
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const blogId = urlParams.get("blogId")
+
+        sessionStorage.setItem("userUID", uid);  
+        sessionStorage.setItem("userFname", firstname);  
+        sessionStorage.setItem("userLname", lastname);  
+        sessionStorage.setItem("userNames", lastname+' '+ firstname);  
+
+        if(blogId){
+            window.location.href = `../pages/blog_read_more.html?postuid=${blogId}`
+        } else{
+
         if(role === 'client'){
-            sessionStorage.setItem("userUID", uid);
-            sessionStorage.setItem("clientEmail", email);
-            sessionStorage.setItem("clientNames", firstname+' '+lastname);   
-            sessionStorage.setItem("clientFname", firstname);  
-            sessionStorage.setItem("clientLname", lastname);  
+           
             window.location.href = "../admin/dashboard_client.html";
         }
         else if(role === 'admin'){
-            sessionStorage.setItem("userUID", uid);
-            sessionStorage.setItem("adminEmail", email);
-            sessionStorage.setItem("adminFname", firstname);  
-            sessionStorage.setItem("adminLname", lastname);  
+            // sessionStorage.setItem("userUID", uid);
+            // sessionStorage.setItem("adminEmail", email);
+            // sessionStorage.setItem("adminFname", firstname);  
+            // sessionStorage.setItem("adminLname", lastname);  
             window.location.href="../admin/dashboard_admin.html";
         }
-       
+    }
         });
 })
 .catch(error=>{
