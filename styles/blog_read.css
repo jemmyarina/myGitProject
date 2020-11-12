@@ -61,6 +61,7 @@
     font-weight: bold;
     background-color: #801843;  
     box-shadow: 2px 2px 5px 2px  gray;
+    border : none;
 }
 
 .cContainer{
@@ -81,14 +82,16 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    /* width: 70%; */
    
 }
 .commentContainer{
     display: flex;
-    /* flex-direction: column; */
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+     width: 700px;
+     height: 60px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .cContent{
     overflow: scroll;
@@ -123,6 +126,9 @@
 .replyForm{
     overflow: scroll;
     resize: none;
+}
+.comment-form{
+    display: none;
 }
 
   /* RESPONSIVENESS BELOW

@@ -41,7 +41,8 @@ function dataRetreived(){
                 <p>${a.post_date}/ by <span class='sp'>${a.pub_names}</span> </p>
             </div>
             <div class='Post_starting_txt'>
-                <p>${a.post_textarea2}</p>
+            
+                <p>${a.post_textarea2.slice(0,100)}...</p>
             </div>
             <div class='Read_more_btn'>
                 <input type='submit' onclick= "triggerBlog('${BlogUID}')" value='Read more'>
@@ -52,13 +53,14 @@ function dataRetreived(){
 
 `
     })
+
 document.getElementById("blogArticle").innerHTML=articalPost;
-        /* Limit Text */
-        var txt= $('.Post_starting_txt');
-        //    var txt= document.getElementsByClassName('p');
-           txt.text(function(index, currentText) {
-             return currentText.substr(0, 100)+"...";
-           });   
+//         /* Limit Text */
+//         var txt= $('.Post_starting_txt');
+//            var txt= document.getElementsByClassName('p');
+//            txt.text(function(index, currentText) {
+//              return currentText.substr(0, 20)+"...";
+//            });   
 }
 function triggerBlog(BlogUID){
 //   sessionStorage.setItem('blogId',blogId);

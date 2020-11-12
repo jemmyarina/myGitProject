@@ -46,12 +46,33 @@
 			<button class="logout">Logout</button>  
 		</div>
 		<div class="Blog_posts" id="post">
-            
+			<div class="Post_title">
+                <p  id="Post_title">article title</p>
+            </div>
+
+            <div class="Post_photo_and_content">
+                <!-- <div class="Post_photo">
+                    <img src= "#" id ="post_img" alt="Post image" style="width: 120px;">
+				</div>
+				<div class="Date_pub_and_text">
+					<div class="Post_date_publisher">
+						<p id="Post_date">10/10/2020/ by <span class="sp" id="Post_publisher"> Banardo</span> </p>
+					</div>
+					<div class="Post_txt">
+						<p>dfasdf sdfafa  dfga fga gfa g afga fgdgf af</p> 
+					</div>
+				</div> -->
+			</div>
 		</div>
 	 
-		<button id="comment_btn"> Login to comment</button>
+		
+
+
 		<p class="errorMessage"></p>
 		<!-- <div class="cContainer"> -->
+			
+			<!-- form -->
+			<button class="comment_btn"  id="comment_btn"> Login to comment</button> 
 			<div class="commentsInput">
 				<form class="comment-form">
 					<br>
@@ -62,38 +83,17 @@
 				</form>
 			</div>
 
-			<div class="commentsOutput">
-				<!-- <div class="commentContainer"> -->
-					<!-- <div class="comment"> -->
-						<div class="cPhoto">
-							<img src="../assets/commenter.png" alt="Post image">
-						</div>
-						<div class="cDetails">
-							<div class="cDateClient">
-								<p> 07/11/2020</p>
-								<span> James Mugabo</span>
-							</div>
-							
-							<p class="cBody">Nice blog! Thank youuuuuuuuuuuuuuuuuu uu adfa sadf sdfa dfa fa sdfad fadf adf adf asfa sdfa sdfas dfad fadf adf uuuuu uuuuuuuuuuu wqwerw rt wrrt qwrt wrt wrtw rtwe rtwr twer twer twruuuu!</p> 
-						</div>
-					<!-- </div> -->
-					<br>
-					<!-- <button type="submit" id="replybtn">Reply</button><br> -->
-				</div>
-				
-				<!-- <div class="replyContainer">
 
-					<form action="" class="replyForm"> 
-						<label>
-							<textarea id="cOutput" cols="100" rows="2"></textarea>
-						</label><br>
-						<button type="submit" id="SendReplybtn">Send</button>
-					 </form>
-				</div> -->
+
+
+
+
+
+			<div class="commentsOutput">
 				
+
 			</div>
 			
-		<!-- </div> -->
  	</section>	
 </div> 
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
@@ -104,42 +104,30 @@
 <script src="../scripts/firebaseConfig.js"></script>
 <script src="../scripts/main.js"></script>
 <script src="../scripts/admin.js"></script>
+<script src="../scripts/signIn.js"></script>
 <script src="../scripts/blog_redirectional.js"></script>
 
 
 <script>
 
-	// disabling and enabling commenting button
-	// var userId = sessionStorage.getItem('userUID');
-
-	// if(userId){
-	// 	document.getElementById("submitbtn").disabled = false;
-	// 	document.getElementById("comment_btn").hidden = true;
-	// }
-	// else{
-	// 	document.getElementById("submitbtn").disabled = true;
-	// }
+	// Disabling the sending  button
+    // const commentForm=document.querySelector('.comment-form');
+    // const sendbtn=document.querySelector('#submitbtn');
+    
+    // commentForm.style.display="none";
 
 	const username = sessionStorage.getItem("userFname");
 	let userUpperCase = username.toUpperCase();
 	document.getElementById('welcomeUser').innerHTML = userUpperCase;
-	// document.getElementById('email-field').innerHTML = email;
 
-	// function showComments() {
-	// document.getElementsByClassName("commentsOutput").style.visibility = "hidden";
-	// }
-
-	
-	// // LOGOUT
-	// const logoutRead=document.getElementById("logoutReading");
-	// logoutRead.addEventListener('click',(e)=>{
-	// 	e.preventDefault();
-	// 	auth.signOut().then(()=>{
-	// 		location.href="../pages/blog.html";
-	// 	}) .catch(error=>{
-	// 		console.log('Failed to logout');
-	// 	});
-	// });
+	function displayForm(){
+		console.log(userUpperCase);
+		if(username){
+			commentForm.style.display="block";
+			loginButton.style.display="none";
+	}
+	}
+	displayForm()
 
 </script>
 

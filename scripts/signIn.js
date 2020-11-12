@@ -1,9 +1,13 @@
 const signInForm=document.querySelector(".form_container");
+
 signInForm.addEventListener('submit', (e)=>{
 e.preventDefault();
 const email=document.getElementById("email").value;
 const password=document.getElementById("password").value;
 const message=document.getElementById("message");
+
+
+
 if(email=='')
     {   message.style.display="block";
         message.innerHTML='Please, enter email';
@@ -41,23 +45,23 @@ if(email=='')
         sessionStorage.setItem("userLname", lastname);  
         sessionStorage.setItem("userNames", lastname+' '+ firstname);  
 
+        
+
         if(blogId){
             window.location.href = `../pages/blog_read_more.html?postuid=${blogId}`
-        } else{
+        } 
+        else{
 
-        if(role === 'client'){
-           
-            window.location.href = "../admin/dashboard_client.html";
+            if(role === 'client'){
+            
+                window.location.href = "../admin/dashboard_client.html";
+            }
+            else if(role === 'admin'){
+    
+                window.location.href="../admin/dashboard_admin.html";
+            }
         }
-        else if(role === 'admin'){
-            // sessionStorage.setItem("userUID", uid);
-            // sessionStorage.setItem("adminEmail", email);
-            // sessionStorage.setItem("adminFname", firstname);  
-            // sessionStorage.setItem("adminLname", lastname);  
-            window.location.href="../admin/dashboard_admin.html";
-        }
-    }
-        });
+    });
 })
 .catch(error=>{
     

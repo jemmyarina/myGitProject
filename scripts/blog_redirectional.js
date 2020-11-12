@@ -6,28 +6,38 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
+// Disabling the sending  button
+    const commentbtn=document.querySelector('#comment_btn');
+    const sendbtn=document.querySelector('#submitbtn');
+    commentbtn.style.display="block";
+   
+
+
 var uid = getUrlParameter("postuid");
 
-db.collection("Blog_articles").doc(uid).get().then((doc) => {
-
-
+db.collection("Blog_articles").doc(uid).get().then(async (doc) => {
+    const img = await storage.ref(doc.data().post_photo).getDownloadURL().then( blogImage =>{
+        return blogImage;
+    }).catch( (e)=>{
+        console.log(e);
+    })
     var record ="";
-
     var Data = doc.data();
     
+    const formattedDate = new Date (Data.post_date).toLocaleString();
+
     record+=`
-    
     <div class="Post_title">
                 <p>${Data.post_title}</p>
             </div>
 
             <div class="Post_photo_and_content">
                 <div class="Post_photo">
-                    <img src="" alt="Post image" style="width: 120px;">
+                    <img src="${img}" alt="Post image" style="width: 120px;">
 				</div>
 				<div class="Date_pub_and_text">
 					<div class="Post_date_publisher">
-						<p>${Data.post_date}/ by <span class="sp">${Data.pub_names}</span> </p>
+						<p>${formattedDate}/ by <span class="sp">${Data.pub_names}</span> </p>
 					</div>
 					<div class="Post_txt">
 						<p>${Data.post_textarea2}</p> 
@@ -105,24 +115,57 @@ db.collection('Blog_articles').doc(uid).collection("comments").get().then(snapsh
 
 
 //parent container
-const commentContainer = document.querySelector('.commentsOutput')
-
+// const commentOutput = document.querySelector('.commentsOutput')
+const commentContainer = document.querySelector('.commentsOutput');
 function showComments(doc){
- 
-    const commentContainer = document.createElement('div')
-    commentContainer.setAttribute('class', 'commentContainer')
-    const cPhoto = document.createElement('div')
-    cPhoto.setAttribute('class', 'cPhoto')
-    const image = document.createElement('img')
-    image.setAttribute('src', '../assets/commenter.png')
-    cPhoto.appendChild(image)
-    commentContainer.appendChild(cPhoto)
-    const cDetails = document.createElement('div')
-    const cDateClient = document.createElement('div')
-    cDetails.appendChild(cDateClient)
-    commentContainer.appendChild(cDetails)
-    let pDate = document.createElement('p')
-    pDate.innerText = doc.data().Date
-    cDateClient.appendChild(pDate)
+   const result=doc.data();
 
+   const div = document.createElement('div');
+   div.innerHTML = `
+   <div class="commentContainer">	
+            <div class="cDetails">
+                <div class="cDateClient">
+                    <p> ${result.Date}</p>
+                    <span> ${result.userName} </span>
+                </div>
+                
+                <p class="cBody"> ${result.Comment}</p> 
+            </div>
+        <br>
+    </div>
+   `
+    commentContainer.appendChild(div);
+
+    // const commentContainer = document.createElement('div')
+    // commentContainer.setAttribute('class', 'commentContainer')
+
+    // // const cPhoto = document.createElement('div')
+    // // cPhoto.setAttribute('class', 'cPhoto')
+
+    // // const image = document.createElement('img')
+    // // image.setAttribute('src', '../assets/commenter.png')
+    // // cPhoto.appendChild(image)
+    // // commentContainer.appendChild(cPhoto)
+    // const cDetails = document.createElement('div')
+    // const cDateClient = document.createElement('div')
+
+    // cDateClient.setAttribute('class', 'cDateClient')
+    // cDetails.appendChild(cDateClient)
+    // commentContainer.appendChild(cDetails)
+    // let pDate = document.createElement('p')
+    // pDate.innerText = doc.data().Date.toLocaleString()
+    // cDateClient.appendChild(pDate)
+    // let span = document.createElement('span')
+    // span.innerText = doc.data().userName
+    // cDateClient.appendChild(span)
+    // let comment = document.createElement('p')
+    // comment.setAttribute('class', 'cBody')
+    // comment.innerText = doc.data().Comment
+    // cDetails.appendChild(comment)
+    // commentOutput.appendChild(commentContainer)
+    // let br = document.createElement('br')
+    // commentContainer.appendChild(br)
+    
 }
+
+
