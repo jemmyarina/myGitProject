@@ -1,10 +1,12 @@
+
 .skills_container{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 70%;
-    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 30vh;
+    /* margin: 0 auto; */
 }
 img{
     width: 80px;
@@ -13,12 +15,12 @@ img{
 .skills{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between;
+    align-items: center; */
     width: 100%;
     border: 1px solid gray;
     border-bottom: 3px solid gray;
-    margin: 20px;
+    /* margin: 20px; */
     box-shadow: 2px 2px 4px 2px lightgray;
 }
 .backendIcon, .frontendIcon, .otherskillsIcon{
