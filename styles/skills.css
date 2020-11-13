@@ -12,19 +12,15 @@ img{
     width: 90px;
     height: 80px;
 }
-p{
+.skills_container p{
     font-size: 25px;
-    font-weight: bold;
+    font-style: italic;
 }
 .skills{
     display: flex;
     width: 100%;
-    /* border: 1px solid gray; */
-    /* border-bottom: 1px solid gray; */
     height: 110px;
-    box-shadow: 5px 0px 10px 3px lightgray;
-    /* margin : auto auto; */
-    
+    box-shadow: 5px 0px 19px 3px lightgray;
 }
 .backendIcon, .frontendIcon, .otherskillsIcon{
     display: flex;
@@ -36,65 +32,5 @@ p{
 
 /* =====================RESPONSIVENESS BELOW ===================== */
 
-@media only screen and (max-width:1200px){
 
-    .form_border{
-        width:14em;
-        margin-bottom: 20em;
-    }
-    .page_txt .error_message{
-        font-size: 0.7em;
-        width: 170px;
-        height: 20px;
-    }
-    .form_container{
-        line-height: 10px;
-    }
-    .page_txt .contact_txt_parag{
-      font-size: 0.8em;
-    }
-    input[type=text], input[type=email]{
-        width: 10rem;
-        height: 1.7rem;
-        font-size: 0.7em;
-     }
-     label{
-         font-size: 0.7em;
-     }
-      textarea {
-         width: 10rem;
-         height: 5em;
-         font-size: 0.7em;
-     }
-     
-     input[type=submit] {
-         width: 140px;
-         height: 30px; 
-         font-size: 0.9rem;
-     }
-}
-@media only screen and (max-width:300px){
-
-    .form_border{
-        width:12em;
-    }
-    .form_container{
-        line-height: 5px;
-    }
-    .page_txt .contact_txt_parag{
-      font-size: 0.6em;
-    }
-    .page_txt .error_message{
-        height: 40px;
-    }
-    input[type=text], input[type=email]{
-        width: 8.5rem;
-        height: 1.3rem;
-     }
-
-      textarea {
-        width: 8.5rem;
-     }
-}
- 
   
