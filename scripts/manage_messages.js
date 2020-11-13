@@ -25,7 +25,7 @@ function manageMessages() {
         <td>${doc.data().Name}</td>
          
             <td ><input type="submit" value="Delete"></td>
-            <td ><input type="submit" value="Reply"></td>
+             
          
     </tr>    
     
