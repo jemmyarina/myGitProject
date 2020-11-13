@@ -3,7 +3,7 @@ window.onload = () => {
     manageUsers();
 }
 
-
+//.......GETTING A USER.........
 function datafetched(){
 const usersList = document.querySelector('table')
 db.collection("Users").get().then(function(querySnapshot) {
@@ -16,7 +16,7 @@ db.collection("Users").get().then(function(querySnapshot) {
     <td> ${doc.data().lname}</td>
     <td>${doc.data().email}</td>
     <td>${doc.data().role}</td>
-        <td ><input type="submit" value="Delete"></td>`
+        <td ><input type="submit" value="Delete" onclick=deleteUser('${doc.id}') ></td>`
         usersList.appendChild(userRow);
      });
   });
@@ -24,14 +24,21 @@ db.collection("Users").get().then(function(querySnapshot) {
 }
 datafetched();
 
-//.......DELETE USER..........
-// function deleteUser(userId) {
-//   db.collection('Users').doc(userId).delete().then(() => {
-//     alert("USER DELETED SUCCESSFULLY!");
-//   }).catch(e =>{
-//     alert("FAILED TO DELETE THIS USER!");
-//   });
 
-//   datafetched();
-//   setTimeout(()=>{
-//    deleteUser()}, 60000);
+//.......DELETE USER..........
+
+function deleteUser(userId){
+    db.collection("Users").doc(userId).delete().then( ()=>{
+        alert("USER DELETED SUCCESSFULLY!");
+    })
+    .catch(e =>{
+        alert("FAILED TO DELETE THIS USER!");
+    })
+};
+
+
+  datafetched();
+
+
+  setTimeout(()=>{
+   deleteUser(), 6000});

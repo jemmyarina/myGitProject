@@ -5,27 +5,96 @@
     justify-content: space-around;
     align-items: center;
     width: 80%;
-    margin-bottom: 30vh;
-    /* margin: 0 auto; */
+    margin-top: 5%;
+    margin : auto auto;
 }
 img{
-    width: 80px;
+    width: 90px;
     height: 80px;
+}
+p{
+    font-size: 25px;
+    font-weight: bold;
 }
 .skills{
     display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-between;
-    align-items: center; */
     width: 100%;
-    border: 1px solid gray;
-    border-bottom: 3px solid gray;
-    /* margin: 20px; */
-    box-shadow: 2px 2px 4px 2px lightgray;
+    /* border: 1px solid gray; */
+    /* border-bottom: 1px solid gray; */
+    height: 110px;
+    box-shadow: 5px 0px 10px 3px lightgray;
+    /* margin : auto auto; */
+    
 }
 .backendIcon, .frontendIcon, .otherskillsIcon{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 25%;
+    align-items: center;
+    margin: 0 auto;
 }
+
+/* =====================RESPONSIVENESS BELOW ===================== */
+
+@media only screen and (max-width:1200px){
+
+    .form_border{
+        width:14em;
+        margin-bottom: 20em;
+    }
+    .page_txt .error_message{
+        font-size: 0.7em;
+        width: 170px;
+        height: 20px;
+    }
+    .form_container{
+        line-height: 10px;
+    }
+    .page_txt .contact_txt_parag{
+      font-size: 0.8em;
+    }
+    input[type=text], input[type=email]{
+        width: 10rem;
+        height: 1.7rem;
+        font-size: 0.7em;
+     }
+     label{
+         font-size: 0.7em;
+     }
+      textarea {
+         width: 10rem;
+         height: 5em;
+         font-size: 0.7em;
+     }
+     
+     input[type=submit] {
+         width: 140px;
+         height: 30px; 
+         font-size: 0.9rem;
+     }
+}
+@media only screen and (max-width:300px){
+
+    .form_border{
+        width:12em;
+    }
+    .form_container{
+        line-height: 5px;
+    }
+    .page_txt .contact_txt_parag{
+      font-size: 0.6em;
+    }
+    .page_txt .error_message{
+        height: 40px;
+    }
+    input[type=text], input[type=email]{
+        width: 8.5rem;
+        height: 1.3rem;
+     }
+
+      textarea {
+        width: 8.5rem;
+     }
+}
+ 
+  

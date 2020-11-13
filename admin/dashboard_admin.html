@@ -109,9 +109,9 @@
 <script src="../scripts/main.js"></script>
 
 <script>
-    const firstname = sessionStorage.getItem("adminFname");
-
-    document.getElementById('welcomeUser').innerHTML=firstname;
+     
+    const adminUser= sessionStorage.getItem("userNames");
+   document.getElementById('welcomeUser').innerHTML=adminUser;
 
     //count messages
     db.collection('messages').get().then(function(m){

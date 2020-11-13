@@ -24,18 +24,33 @@ function manageMessages() {
         <td> ${doc.data().Message}</td>
         <td>${doc.data().Name}</td>
          
-            <td ><input type="submit" value="Delete"></td>
-            <td ><input type="submit" value="Reply"></td>
+            <td ><input type="submit" value="Delete" onclick=deleteMessage('${doc.id}')></td>
+            
+             
          
     </tr>    
     
     `
         messagesList.appendChild(messageRow);
-        //   "<tr> <td>"+ doc.data().role +"</td> <td>"+ doc.data().email +"</td> <td class='all-btn' ><button  onclick='viewContent()' class='button button1'> "+ 'View' +" </button> <button  onclick='editContent()' class='button button2'>"+ 'Edit' +"</button> <button onclick='deletePost()' class='button button3'>"+ 'Delete' +"</button> </td> </tr>" 
+         
          });
       });
     
     }
     
     messagefetched();
+
+    //.......DELETE MESSAGE..........
+
+function deleteMessage(messageId){
+    db.collection("messages").doc(messageId).delete().then( ()=>{
+        alert("MESSAGE DELETED SUCCESSFULLY!");
+    })
+    .catch(e =>{
+        alert("FAILED TO DELETE THIS MESSAGE!");
+    })
+};
     
+
+setTimeout(()=>{
+    deleteMessage(), 6000});
