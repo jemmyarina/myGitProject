@@ -1,7 +1,8 @@
 let articles=[];
-let limitnumber =3;
+// let limitnumber =3;
 function retreive(){
-    db.collection("Blog_articles").orderBy("post_date").limit(limitnumber).get().then((querySnapshot) => {
+    // db.collection("Blog_articles").orderBy("post_date").limit(limitnumber).get().then((querySnapshot) => {
+    db.collection("Blog_articles").orderBy("post_date").get().then((querySnapshot) => {
       querySnapshot.forEach((article)=> {
         storage.ref(article.data().post_photo).getDownloadURL().then((blogImageUrl)=>{
             articles.push({

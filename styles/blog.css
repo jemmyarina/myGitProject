@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    width: 80%;
     margin: auto auto;
 }
 .Blog_latest_group .Latest_title{
@@ -32,7 +32,7 @@
     justify-content: space-between;
     align-items: center;
     width: 95%;
-    font-size: 1.4em;
+    font-size: 2.5em;
 }
 .Latest_title img{
     width: 30%;
@@ -44,14 +44,15 @@
     align-items: center;
     width: 100%;
     background-color: #CDCACA;
-    padding: 4px;  
+    padding: 10px 15px;  
 }
 .Latest_posts_container .Post_border{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 95%;
-    border: 2px solid #C4C4C4;
+    /* height: 40%; */
+    border: 1px solid #C4C4C4;
     background-color:white;
     margin: 0 auto;
 }
@@ -75,7 +76,7 @@
     margin: 0 auto;
 }
 .Post_text .Post_title{
-    font-size: 1.6em;
+    font-size: 1.3em;
     font-weight: bold;
 }
 .Post_text .Post_date_publisher{
@@ -89,13 +90,15 @@
 .Post_text .Post_starting_txt{
     font-size: 1.2em;
 }
+:focus{
+    outline: none;
+}
 input[type=submit] {
     width: 7em;
-    /* height: 3.6vh;  */
     border: 1px solid #000000;
     text-decoration: none;
-    font-size: 1em;
-    border-radius: 5px;
+    font-size: 0.8em;
+    border-radius: 25px;
     font-weight: bold;
 }
 /* RIGHT SIDE(POPULAR POSTS)  */

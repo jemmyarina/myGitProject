@@ -1,21 +1,25 @@
 
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Poppins', sans-serif;
-}
+ .Profession{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     width: 80%;
+     margin: auto;
+     box-shadow: 2px 2px 5px 2px gray;
 
-.social_media_and_join_btn{
-display: flex;
-flex-direction: column;
-align-self: flex-end;
-}
-.social_media_and_join_btn ul {
-    list-style: none;
-    line-height: 6vw;
-    
-}
-
-
-
+ }
+ h1{
+     color: #801843;
+ }
+ .heading{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     width: 90%;
+     padding: 50px;
+     margin : 0px 300px; 
+     border-bottom: 2px solid gray;
+ }
+ 
