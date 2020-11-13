@@ -9,9 +9,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-:focus{
-    outline: none;
-}
 
 /* ============BOTTOM LEFT SIDE================= */
 .left_side{
@@ -21,7 +18,8 @@
     align-items: center;
     width: 50%;
     height: 83vh;
-    margin-top: 5%;
+    padding-top: 5%;
+    margin: auto auto;
     font-size: 20px;
 }
 /* ==========contact messages============= */
@@ -96,17 +94,17 @@
 
 
 /* ===============BOTTOM RIGHT SIDE================= */
-.right_side{
+/* .right_side{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
     width: 50%;
     height: 83vh;
-}
+} */
 
 /* ==========Top 5 read articles============= */
-.right_side .top_articles{
+/* .right_side .top_articles{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -152,11 +150,11 @@
     align-items: center;
     width: 12%;
     height: 10%;
-}
+} */
 
 /* =======Top 3 recent contact messages=======  */
 
-.right_side .recent_contact_messages{
+/* .right_side .recent_contact_messages{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -202,7 +200,7 @@
     align-items: center;
     width: 50%;
     height: 25%;
-}
+} */
 
 @media only screen and (max-width:1418px){
     .nav_top{
@@ -249,24 +247,24 @@
         padding-bottom: 1em;
     }
  /* ==RIGHT SIDE OF BOTTOM== */
- .right_side{
+ /* .right_side{
     display: flex;
     width: 87%;
     font-size: 1.4rem;
     margin-top: 4em;
     font-size: 1.2rem;
-}
+} */
 
 }
  
-@media only screen and (max-width:845px){
+/* @media only screen and (max-width:845px){
     .right_side .top_articles{
         font-size: 1rem;
     }
     .right_side .recent_contact_messages{
         font-size: 1rem;
     }
-}  
+}   */
 
 @media only screen and (max-width:670px){
     .nav_top{
@@ -289,9 +287,9 @@
     .left_side .registered_clients{
         height: 9em;
     }
-    .right_side{
+    /* .right_side{
         margin: 0.1em 0 0.1em 0;
-}   
+    }   
     .right_side .top_articles{
         font-size: 0.5em;
         line-height: 1.2rem;
@@ -301,6 +299,6 @@
         font-size: 0.5em;
         line-height: 1.2rem;
         height: 30%;
-    }
+    } */
 }  
 
