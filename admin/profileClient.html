@@ -17,7 +17,7 @@
         <div class="dashboard_btn"><a href="dashboard_client.html">Dashboard</a></div>
         <div class="welcomeUser"><p>Welcome</p><p id="welcomeUser"></p></div>
         <div class="publish_article"><a href="create_blog_client.html"><img src="../assets/article_publish.png" alt="user icon"><p>Publish an article</p></a></div>
-        <div><a href="view_blog_client.html"><img src="../assets/message.png" alt="message icon"><p>View articles</p></a></div>
+        <!-- <div><a href="view_blog_client.html"><img src="../assets/message.png" alt="message icon"><p>View articles</p></a></div> -->
         <div class="settings"><a href="profileClient.html"><img src="../assets/settings_icon.png" alt="settings icon"><p>Profile</p></a></div>
         <div class="logout"><p>Logout</p> </div>
     </nav>
@@ -41,11 +41,7 @@
                     <label for="title ">Last name:<span>*</span><br>
                         <input type="text" class="title" placeholder="Enter your password" id="lname">
                     </label>
-                    <div class="pPhoto">
-                        <label for="photo"> Profile photo:<br>
-                            <input type="file"  value="upload" class="photo">
-                        </label> <br> <br> 
-                    </div>
+              <br>
                 <input type="submit" value="Update" onclick="updateProfile()">
             </form>
         </div>
@@ -67,8 +63,9 @@
 <script src="../scripts/logout_client.js"></script>
 
 <script>
-    const username = sessionStorage.getItem("clientNames");
-   document.getElementById('welcomeUser').innerHTML=username;
+    const clientUser= sessionStorage.getItem("userNames");
+    document.getElementById('welcomeUser').innerHTML=clientUser;
+
    const uid = sessionStorage.getItem('userUID');
    console.log(uid);
 
@@ -88,8 +85,9 @@
 
 
 <script>
+
     const uid = localStorage.getItem('userUID');
-    // const bform=document.querySelector('#form');
+  
     const yourEmail = document.getElementById('email');
     const yourFname = document.getElementById('fname');
     const yourLname = document.getElementById('lname');

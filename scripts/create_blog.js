@@ -1,5 +1,5 @@
-var username = sessionStorage.getItem("firstname");
-console.log(username)
+var publisher = sessionStorage.getItem("userNames");
+console.log(publisher)
 
 let articleImage;
 
@@ -11,7 +11,7 @@ function uploadImage(event){
 
 const bform=document.getElementById('form');
 const post_title=document.getElementsByClassName('title')[0];
-const post_date=document.getElementsByClassName('date')[0];
+// const post_date=document.getElementsByClassName('date')[0];
 const post_textarea2=document.getElementsByClassName('textarea2')[0];
 const post_photo=document.getElementsByClassName('photo')[0];
 const errorMessage=document.querySelector('.errorMessage');
@@ -37,7 +37,7 @@ function createBlog(){
         .then(()=>{
             db.collection("Blog_articles").doc(`${articleId}`).set({
 
-                pub_names:username,
+                pub_names:publisher,
                 post_title:post_title.value,
                 post_date:new Date().getTime(),
                 post_textarea2:post_textarea2.value,
