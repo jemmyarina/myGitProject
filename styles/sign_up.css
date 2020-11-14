@@ -1,7 +1,9 @@
 :focus{
     outline: none;
 }
-
+input[type="submit"]{
+    cursor: pointer;
+}
 /* FORM CODES START BELOW: */
 .border_all{
     display: flex;

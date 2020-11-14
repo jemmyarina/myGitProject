@@ -45,5 +45,10 @@
 <script src="../scripts/firebaseConfig.js"></script>
 <script src="../scripts/manage_messages.js"></script>
 <script src="../scripts/admin.js"></script>
+<script>
+    const adminUser= sessionStorage.getItem("userNames");
+    document.getElementById('welcomeUser').innerHTML=adminUser;
+</script>
+
 </body>
 </htnl>

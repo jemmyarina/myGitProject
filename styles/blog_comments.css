@@ -1,7 +1,9 @@
 :focus{
     outline: none;
 }
-
+input[type="submit"]{
+    cursor: pointer;
+}
 .Blog_posts{
     display: flex;
     flex-direction: column;

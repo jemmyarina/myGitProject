@@ -15,11 +15,11 @@
         <div id="dashboard_btn"><a href="dashboard_client.html">Dashboard</a></div>
         <div class="welcomeUser"><p>Welcome</p><p id="welcomeUser"></p></div>
         <div class="publish_article"><a href="create_blog_client.html"><img src="../assets/article_publish.png" alt="user icon"><p>Publish an article</p></a></div>
-        <div class="settings"><a href="profileClient.html"><img src="../assets/settings_icon.png" alt="settings icon"><p>Profile</p></a></div>
         <div class="logout"><p>Logout</p> </div>
     </nav>
     <section class="section_bottom">
-        <div><a href="#"><img src="../assets/users.png" alt="user icon"><p id="username">Users</p></a></div>  
+        <div> <img src="../assets/welcome2.png" alt="user icon"> </div>  
+        <div> <img src="../assets/welcome2.png" alt="user icon"> </div>  
     </section>
 </div>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
@@ -33,8 +33,7 @@
 
 <script>
     const clientUser= sessionStorage.getItem("userNames");
-   document.getElementById('welcomeUser').innerHTML=clientUser;
- 
+    document.getElementById('welcomeUser').innerHTML=clientUser;
 </script>
 
 </body>

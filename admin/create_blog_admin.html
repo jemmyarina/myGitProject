@@ -22,26 +22,22 @@
         <div><a href="../pages/sign_in.html"><img src="../assets/settings_icon.png" alt="logout icon"><p class="logout">Logout</p></a></div>
     </nav>
     <section class="section_bottom">
-       
-        <form action="" class="form_container" id="form"> 
-            <h1>Publish an article</h1>
-            
+        <h1 class="header">Publish an article</h1>
+        <form action="" class="form_container" id="form" onsubmit="event.preventDefault()"> 
+            <h4 class="errorMessage"></h4>
+           
                 <label for="title ">Blog title:<span>*</span><br>
                     <input type="text" class="title">
                 </label>
-                <label for="message_centent"> Article post body:<span>*</span><br>
+                
+                <label for="message_content"> Article post body:<span>*</span><br>
                 <textarea class="textarea2" name="textarea" rows="6" cols="100" placeholder="Type here..."></textarea>
                 </label>
                 <label for="photo"> Article photo:<br>
-                    <input type="file"  value="upload" id="photo">
+                    <input type="file"  value="upload" class="photo" onchange="uploadImage(event)">
                 </label> <br>
-                <div class="buttons">
-                    <input type="submit" value="Publish">
-                
-                </div>
-           
+            <input type="submit" value="Publish" onclick="createBlog()">
         </form>
-     
     </section>
 </div>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
@@ -53,6 +49,12 @@
 <script src="../scripts/firebaseConfig.js"></script>
 <script src="../scripts/admin.js"></script>
 <script src="../scripts/main.js"></script>
+
+<script>
+     
+    const adminUser= sessionStorage.getItem("userNames");
+    document.getElementById('welcomeUser').innerHTML=adminUser;
+</script>
 
 </body>
 </htnl>
