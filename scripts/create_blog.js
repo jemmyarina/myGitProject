@@ -16,7 +16,7 @@ const post_textarea2=document.getElementsByClassName('textarea2')[0];
 const post_photo=document.getElementsByClassName('photo')[0];
 const errorMessage=document.querySelector('.errorMessage');
 const articleId=uniqueid();
-
+console.log(articleId);
 function createBlog(){
     const emailRegex=/^[a-z]+([a-z0-9_\-\.]){1,}\@([a-z0-9_\-\.]){1,}\.([a-z]{2,4})$/
     
