@@ -8,7 +8,9 @@
 .loading img{
     width: 200%;
 }
-
+input[type="submit"]{
+    cursor: pointer;
+}
 
 .Blog_posts{
     display: flex;

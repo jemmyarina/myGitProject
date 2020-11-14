@@ -42,7 +42,7 @@
  	<section class="right2"> 
 		<div class="page_bar">
 			<p>BLOG</p>
-			<p class="welcomeUser"><p id="welcomeUser"></p></p>
+			<p class="welcomeUser">Welcome<p id="welcomeUser"></p></p>
 			<button class="logout">Logout</button>  
 		</div>
 		<div class="Blog_posts" id="post">
@@ -77,15 +77,11 @@
 				<form class="comment-form">
 					<br>
 					<label>
-						<textarea class="cContent" cols="70" rows="3"></textarea>
+						<textarea class="cContent" maxlength="100" cols="70" rows="3" placeholder="Please, enter comment text here..."></textarea>
 					</label><br>
 					<button type="submit" class="comment_btn" id="submitbtn">Send</button>
 				</form>
 			</div>
-
-
-
-
 
 
 
@@ -110,20 +106,16 @@
 
 <script>
 
-	// Disabling the sending  button
-    // const commentForm=document.querySelector('.comment-form');
-    // const sendbtn=document.querySelector('#submitbtn');
-    
-    // commentForm.style.display="none";
-
 	const username = sessionStorage.getItem("userFname");
 	let userUpperCase = username.toUpperCase();
 	document.getElementById('welcomeUser').innerHTML = userUpperCase;
+	const logout = document.getElementsByClassName('logout')[0]
 
 	function displayForm(){
 		console.log(userUpperCase);
 		if(username){
 			commentForm.style.display="block";
+			logout.style.display="block";
 			loginButton.style.display="none";
 	}
 	}

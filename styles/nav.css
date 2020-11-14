@@ -7,7 +7,9 @@
 :focus{
     outline: none;
 }
-
+input[type="submit"]{
+    cursor: pointer;
+}
 .wrapper{
     display: flex;
     justify-content: space-between;

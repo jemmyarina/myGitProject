@@ -30,9 +30,10 @@
                 <label for="message_centent"> Article post body:<span>*</span><br>
                 <textarea class="textarea2" id="textarea2" name="textarea" rows="6" cols="100" placeholder="Type here..."></textarea>
                 </label>
-                <label for="photo"> Article photo:<br>
+                <!-- <label for="photo"> Article photo:<br>
                     <input type="file"  value="upload" id="photo">
-                </label> <br>
+                </label>  -->
+                <br>
             <input type="submit" value="Edit" id="editbtn">
         </form>
      
@@ -45,6 +46,11 @@
 
 <script src="../scripts/firebaseConfig.js"></script>
 <script src="../scripts/editBlog.js"></script>
+<script>
+     
+    const adminUser= sessionStorage.getItem("userNames");
+    document.getElementById('welcomeUser').innerHTML=adminUser;
+</script>
 
 </body>
 </html>

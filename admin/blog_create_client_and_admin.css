@@ -12,6 +12,9 @@
     flex-direction: column;
     background-color: lightslategray;
 }
+input[type="submit"]{
+    cursor: pointer;
+}
 .formAndPhoto{
     display: flex;
     width: 50%;

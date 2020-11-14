@@ -11,7 +11,16 @@
 :focus{
     outline: none;
 }
-
+input[type="submit"]{
+    cursor: pointer;
+}
+.section_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   margin: auto ;
+}
+ 
 .wrapper{
     display: flex;
     flex-direction: column;

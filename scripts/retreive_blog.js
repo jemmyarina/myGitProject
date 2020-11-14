@@ -64,11 +64,10 @@ document.getElementById("blogArticle").innerHTML=articalPost;
 //            });   
 }
 function triggerBlog(BlogUID){
-//   sessionStorage.setItem('blogId',blogId);
   window.location.href="../pages/blog_read_more.html?postuid="+BlogUID;
 }
 
 retreive();
 setTimeout(()=>{
    dataRetreived()
-},8000)
+},5000)
